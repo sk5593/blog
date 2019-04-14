@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<!--PageInfo  上一页  下一页 page  -->
+<div class="center" th:fragment="pageNav(pageInfo, prevText, nextText, prefix)">
+<ol class="pagination">
+    <style>
+
+        /*ol.pagination li a {*/
+            /*border: 1px solid #ddd; !* Gray *!*/
+        /*}*/
+        div.center {
+            text-align: center;
+        }
+        ol.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ol.pagination li {display: inline;}
+
+        ol.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        ol.pagination li a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        ol.pagination li a:hover:not(.active) {background-color: #ddd;}
+    </style>
+    <!--如果有上一页， 提供一个 a标签，跳转到 /page/(上一页的下标)
+    显示一个传入的 <-
+    否则，block 隐藏
+    -->
+    <th:block th:if="${pageInfo.hasPreviousPage}">
+        <li class="prev"><a th:href="@{'/'+${prefix}+'/'+${pageInfo.prePage}}" th:text="${prevText}"></a></li>
+    </th:block>
+
+    <!-- navigatepageNums 页面下标组成的数组 [1,2]-->
+
+    <th:block th:each="navIndex :${ pageInfo.navigatepageNums}">
+        <li th:class="${pageInfo.pageNum==navIndex}?'current':''">
+            <a th:href="@{'/'+${prefix}+'/'+${navIndex}}" th:text="${navIndex}"></a>
+        </li>
+    </th:block>
+
+    <!--下一页，同上-->
+    <th:block th:if="${pageInfo.hasNextPage}">
+        <li class="next"><a th:href="@{'/'+${prefix}+'/'+${pageInfo.nextPage}}" th:text="${nextText}"></a></li>
+    </th:block>
+
+</ol>
+</div>
+<div th:fragment="pageAdminNav(pageInfo)">
+    <div class="clearfix">
+        <ul class="pagination m-b-5 pull-right">
+            <li th:if="${pageInfo.hasPreviousPage}">
+                <a th:href="@{'?page='+${pageInfo.prePage}}" aria-label="Previous">
+                    <i class="fa fa-angle-left"></i>&nbsp;上一页
+                </a>
+            </li>
+
+            <th:block th:each="nav : ${pageInfo.navigatepageNums}">
+                <li th:class="${nav==pageInfo.pageNum}?'active':''"><a th:href="@{'?page='+${nav}}" th:text="${nav}"></a>
+                </li>
+            </th:block>
+
+            <th:block th:if="${pageInfo.hasNextPage}">
+                <li>
+                    <a th:href="@{'?page='+${pageInfo.nextPage}}" aria-label="Next">
+                        下一页&nbsp;<i class="fa fa-angle-right"></i>
+                    </a>
+                </li>
+            </th:block>
+
+            <li><span th:text="'共'+${pageInfo.pages}+'页'"></span></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!--如果不需要生成example的话将targetRuntime设置为MyBatis3Simple即可-->
+    <context id="test" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <!-- 生成的注释是否包含生成的时间，一般设置为true，不生成时间 -->
+            <property name="suppressDate" value="true" />
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+        <!--数据库链接URL，用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/tale?serverTimezone=GMT%2B8" userId="root"
+                        password="1234">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <!-- 是否将数据库中的decimal类型转换为java的BigDecimal类型 -->
+            <property name="forceBigDecimals" value="false" />
+        </javaTypeResolver>
+        <!-- 生成模型的包名和位置 -->
+        <javaModelGenerator targetPackage="com.sk.blog.bean"
+                            targetProject="\项目\blog\src\main\java\">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+        <!-- 生成映射文件的包名和位置 -->
+        <sqlMapGenerator targetPackage="com.sk.blog.dao"
+                         targetProject="\项目\blog\src\main\java\">
+            <property name="enableSubPackages" value="true" />
+        </sqlMapGenerator>
+        <!-- 生成DAO的包名和位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.sk.blog.dao"
+                             targetProject="\项目\blog\src\main\java\">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 要生成哪些表 -->
+        <table tableName="t_users" domainObjectName="User"></table>
+        <table tableName="t_relationships" domainObjectName="Relationships"></table>
+        <table tableName="t_logs" domainObjectName="Logs"></table>
+        <table tableName="t_options" domainObjectName="Options"></table>
+        <table tableName="t_contents" domainObjectName="Contents"></table>
+        <table tableName="t_metas" domainObjectName="Metas"></table>
+        <table tableName="t_comments" domainObjectName="Comments"></table>
+
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,97 @@
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="comments">
+<script type="text/javascript">
+
+           KindEditor.ready(function (K) {
+               window.editor = K.create('#textarea', {
+                   items: [
+                       'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                       'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
+                       'insertunorderedlist', 'i', 'emoticons', 'link'
+                   ],
+                   //不可以拖动
+                   resizeType:0
+               })
+           })
+
+
+
+
+</script>
+<body>
+<div th:if="${article}!=null">
+    <div th:id="${article.cid ?: 0}" class="comment-container">
+        <div id="comments" class="clearfix">
+            <div th:if="${article.allowComment}">
+                <span class="response">
+                <th:block th:if="${session.login_user}">
+                    Hi，<a th:href="${session.login_user.homeUrl}" data-no-instant=""
+                          th:text="${session.login_user.username}"></a>
+                    如果你想 <a href="/logout" title="注销" data-no-instant="">注销</a> ?
+                </th:block>
+            </span>
+                <form method="post" id="comment-form"  role="form"
+                      th:action="@{/comments}" >
+                    <input type="hidden" name="coid" id="coid"/>
+                    <input type="hidden" name="cid" id="cid" th:value="${article.cid}"/>
+                    <input type="hidden" name="_csrf_token" th:value="${_csrf_token}"/>
+                    <input type="text" name="author" maxlength="12" id="author"
+                           class="form-control input-control clearfix"
+                           placeholder="姓名 (*)"
+                    />
+                    <input type="email" name="mail" id="mail" class="form-control input-control clearfix"
+                           placeholder="邮箱 (*)"
+                    />
+
+                    <textarea  name="textarea" id="textarea" style="width:600px;height:250px;"></textarea>
+                    <button type="submit" id="misubmit"  >提交</button>
+                </form>
+            </div>
+            <div th:unless="${article.allowComment}">
+                <span class="response">评论已关闭.</span>
+            </div>
+
+            <div th:if="${comments}">
+                <ol class="comment-list">
+                    <th:block th:each="comment :${comments.list}">
+                        <li th:id="'li-comment-'+${comment.coid}" class="comment-body comment-parent comment-odd">
+                            <div th:id="'comment-'+${comment.coid}">
+                                <div class="comment-view" onclick="">
+                                    <div class="comment-header">
+                                        <!--设置get请求的参数-->
+                                        <img class="avatar"
+                                             th:src="@{${commons.gravatar(comment.mail)}(s='80',r='G',d='')}"
+                                             th:title="${comment.author}"
+                                             width="80" height="80"/>
+                                        <span class="comment-author">
+                                <a href="##" rel="external nofollow"
+                                   th:text="${comment.author}"></a>
+                                </span>
+                                    </div>
+                                    <div class="comment-content" >
+                                        <span class="comment-author-at" ></span>
+                                        <p th:utext="${comment.content}"></p>
+                                    </div>
+                                    <div class="comment-meta">
+                                        <time class="comment-time"  th:text="${#dates.format(comment.created, 'yyyy-MM-dd HH:mm:ss')}"></time>
+                                        <span class="comment-reply">
+                            </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </th:block>
+                </ol>
+                <!--第一个div可以让当前页高亮-->
+                <div class="lists-navigator clearfix">
+                <div th:replace="comm/macros::pageNav(${comments},'«上一页','下一页»','comments')"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!--<div th:replace="comm/tale_comment::tale_comment"></div>-->
+</html>

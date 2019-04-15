@@ -314,7 +314,7 @@ public class ContentsExample {
             return (Criteria) this;
         }
 
-        public Criteria andCreatedEqualTo(Integer value) {
+        public Criteria andCreatedEqualTo(Long value) {
             addCriterion("created =", value, "created");
             return (Criteria) this;
         }
@@ -704,7 +704,7 @@ public class ContentsExample {
             return (Criteria) this;
         }
 
-        public Criteria andCategoriesEqualTo(String value) {
+        public Criteria andCategoriesEqualTo(Integer value) {
             addCriterion("categories =", value, "categories");
             return (Criteria) this;
         }

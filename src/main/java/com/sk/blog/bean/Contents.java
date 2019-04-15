@@ -110,7 +110,7 @@ public class Contents {
     }
 
     public void setCategories(String categories) {
-        this.categories = categories == null ? null : categories.trim();
+        this.categories = categories;
     }
 
     public Integer getHits() {

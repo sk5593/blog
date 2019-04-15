@@ -439,6 +439,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .header {
     line-height: 78px;
+    /*background-image: url("/user/img/rand/25.jpg");*/
     position: fixed;
     z-index: 10;
     display: block;
@@ -489,7 +490,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .navbar-menu a {
-    font-size: 14px;
+    font-size: 19px;
     padding: 0 15px
 }
 
@@ -1045,7 +1046,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .archive-page .categorys-title {
-    font-size: 14px;
+    font-size: 18px;
     position: relative;
     margin: 10px auto;
     padding: 0 30px;
@@ -1501,6 +1502,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .footer {
     position: relative;
+
     z-index: 1;
     margin-top: 0;
     padding-bottom: 50px;
@@ -1530,6 +1532,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .footer-meta {
     padding: 50px 0 0;
+    background-image: url("/user/img/rand/1.jpg");
     list-style: none
 }
 

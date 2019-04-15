@@ -20,7 +20,34 @@
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.sk.blog.bean.Contents">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
+
   </resultMap>
+  <resultMap id="Index" type="com.sk.blog.bean.Contents">
+    <id column="cid" jdbcType="INTEGER" property="cid" />
+    <id column="cid" jdbcType="INTEGER" property="cid" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="created" jdbcType="INTEGER" property="created" />
+    <result column="tags" jdbcType="VARCHAR" property="tags" />
+    <result column="cname" jdbcType="VARCHAR" property="categories" />
+  </resultMap>
+  <select id="index" resultMap="Index">
+    SELECT c.cid,c.title,c.tags,k.cname
+    FROM t_contents c
+    LEFT JOIN t_category k on c.categories = k.kid
+
+  </select>
+  <select id="getCategoryName" resultType="String">
+    SELECT cname FROM t_category WHERE id=#{id}
+  </select>
+  <select id="getAllCategories" resultType="com.sk.blog.bean.Categories">
+    SELECT kid,cname FROM t_category
+  </select>
+  <select id="getContentsByMonths" resultType="com.sk.blog.bean.Contents">
+    SELECT title,created,cid FROM t_contents WHERE DATE_FORMAT(FROM_UNIXTIME(t_contents.`created`),'%Y%m')=#{month}
+  </select>
+  <select id="selectUnixTime" resultType="com.sk.blog.bean.Archives">
+   SELECT FROM_UNIXTIME(created,'%Y%m') data,COUNT(cid) COUNT FROM t_contents GROUP BY data DESC
+  </select>
   <update id="updateHits" parameterType="com.sk.blog.bean.Contents">
     UPDATE t_contents SET hits=#{hits} WHERE cid =#{cid}
   </update>

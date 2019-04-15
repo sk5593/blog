@@ -14,13 +14,21 @@ import java.util.List;
 public class IndexService {
     @Autowired
     ContentsMapper contentsMapper;
+
+    /**
+     * 分页显示所有文章
+     * @param page
+     * @param size
+     * @return
+     */
     public PageInfo<Contents> getAllContents(Integer page,Integer size)
     {
-        ContentsExample contentsExample = new ContentsExample();
-        ContentsExample.Criteria publish = contentsExample.createCriteria().andStatusEqualTo("publish");
+//        ContentsExample contentsExample = new ContentsExample();
+//        ContentsExample.Criteria publish = contentsExample.createCriteria().andStatusEqualTo("publish");
+//        PageHelper.startPage(page,size);
+//        List<Contents> contents = contentsMapper.selectByExample(contentsExample);
         PageHelper.startPage(page,size);
-        List<Contents> contents = contentsMapper.selectByExample(contentsExample);
-
+        List<Contents> contents = contentsMapper.index();
         PageInfo<Contents> pageInfo =new PageInfo<>(contents);
         return pageInfo;
     }

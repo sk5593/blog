@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="themes/default/header::header(title='文章归档',keywords=null)"></div>
+<div th:replace="index/header::header(title='文章归档',keywords=null)"></div>
 <body>
+<div th:replace="index/sidebar::sidebar" class="sidebar"></div>
 <div class="main-content archive-page clearfix">
     <div class="categorys-item">
         <th:block th:each="archive : ${archives}">
-            <div class="categorys-title" th:text="${archive.date}"></div>
+            <div class="categorys-title" th:if="${archive.temp}=='archives'" th:text="${archive.data}+'('+${archive.count}+')'"></div>
+            <div class="categorys-title" th:if="${archive.temp}=='category'" th:text="${archive.cname}+'('+${archive.count}+')'"></div>
             <div class="post-lists">
                 <div class="post-lists-body">
-                    <th:block th:each="article : ${archive.articles}">
+                    <th:block th:each="article : ${archive.articleList}">
                         <div class="post-list-item">
                             <div class="post-list-item-container">
                                 <div class="item-label">
                                     <div class="item-title">
-                                        <a th:href="${commons.permalink(article.cid, article.slug)}" th:text="${article.title}"></a>
+                                        <a th:href="@{/article/}+${article.cid}" th:text="${article.title}"></a>
                                     </div>
                                     <div class="item-meta clearfix">
                                         <div class="item-meta-date">发布于 <th:block th:text="${commons.fmtdate(article.created)}"/></div>
@@ -28,5 +30,5 @@
     </div>
 </div>
 </body>
-<div th:replace="themes/default/footer::footer"></div>
+<div th:replace="index/footer::footer"></div>
 </html>

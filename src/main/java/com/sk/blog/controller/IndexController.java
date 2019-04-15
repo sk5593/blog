@@ -24,14 +24,14 @@ public class IndexController {
      * 2019/4/8
      */
 
-  public String index(Model model, Integer page, @RequestParam(defaultValue = "6") Integer size)
+  public String index(Model model, Integer page, @RequestParam(defaultValue = "9") Integer size)
   {
 
     return this.page(1,size,model);
 
   }
   @GetMapping("/page/{p}")
-  public String page(@PathVariable Integer p, @RequestParam(defaultValue = "6") Integer size, Model model)
+  public String page(@PathVariable Integer p, @RequestParam(defaultValue = "9") Integer size, Model model)
   {
       PageInfo<Contents> allContents = indexService.getAllContents(p, size);
       model.addAttribute("articles",allContents);
@@ -39,6 +39,18 @@ public class IndexController {
       model.addAttribute("commons",commons);
       return "index/index";
 
+  }
+
+    /**
+     *
+     * @return 关于我页面跳转
+     */
+  @RequestMapping("/aboutMe")
+    public String about(Model model)
+  {
+      Commons commons=new Commons();
+      model.addAttribute("commons",commons);
+      return "/index/aboutme";
   }
 
 }

@@ -8,7 +8,6 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="no-siteapp" http-equiv="Cache-Control">
-    <script th:src="@{//cdn.bootcss.com/jquery/2.2.3/jquery.min.js}"></script>
 
 </head>
 <body>
@@ -84,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- 主体左侧最新留言 -->
+                    <!-- 主体左侧最新文章 -->
                     <div class="new-leaveWord">
                         <div data-am-widget="list_news" class="am-list-news am-list-news-default">
                             <div class="am-list-news-hd am-cf"><a class="newLeaveWord"><h2 style="color: #110101">
@@ -124,7 +123,7 @@
                                 th:href="@{/article/}+${article.cid}"
                                 target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a></div>
                         <hr>
-                        <!--<div class="article-tags"><i class="am-icon-tag"><div th:text="${article.tags}"></div></i></div>-->
+                        <div class="article-tags"><i class="am-icon-tag" th:text="${article.tags}"></i></div>
                     </div>
                 </div>
                 <!-- 分页 -->

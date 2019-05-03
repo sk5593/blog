@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sk.blog.dao.VisitorsMapper">
+   <update id="updateVisitorsNum" >
+      UPDATE t_visitors SET allvisitors=allvisitors+1,todayvisitors=todayvisitors+1
+   </update>
+   <insert id="insertVisitorsMessages">
+      INSERT INTO t_visitor(visit_ip,visit_time) VALUES (#{ip},#{time})
+   </insert>
+   <select id="getVisitorsNum" resultType="com.sk.blog.bean.Visitors">
+      SELECT * FROM t_visitors
+   </select>
+</mapper>

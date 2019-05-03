@@ -61,7 +61,8 @@ public class IndexController {
           if(content.length()>20)
           {
               String substring = content.substring(0, 100);
-              c.setContent(substring+"...");
+              String s = TaleUtils.mdToHtml(substring);
+              c.setContent(s+"...");
           }
           if(content.startsWith("<iframe")&&content.endsWith("</iframe>"))
           {

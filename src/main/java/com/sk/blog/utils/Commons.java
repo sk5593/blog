@@ -121,20 +121,6 @@ public final class Commons {
         return site_url(Commons.THEME + sub);
     }
 
-    /**
-     * 返回github头像地址
-     *
-     * @param email
-     * @return
-     */
-    public static String gravatar(String email) {
-        String avatarUrl = "https://github.com/identicons/";
-        if (StringUtils.isBlank(email)) {
-            email = "user@hanshuai.xin";
-        }
-        String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
-        return avatarUrl + hash + ".png";
-    }
 
     /**
      * 返回文章链接地址
@@ -193,23 +179,6 @@ public final class Commons {
         return "";
     }
 
-    /**
-     * 显示分类
-     *
-     * @param categories
-     * @return
-     */
-    public static String show_categories(String categories) throws UnsupportedEncodingException {
-        if (StringUtils.isNotBlank(categories)) {
-            String[] arr = categories.split(",");
-            StringBuffer sbuf = new StringBuffer();
-            for (String c : arr) {
-                sbuf.append("<a href=\"/category/" + URLEncoder.encode(c, "UTF-8") + "\">" + c + "</a>");
-            }
-            return sbuf.toString();
-        }
-        return show_categories("默认分类");
-    }
 
     /**
      * 显示标签

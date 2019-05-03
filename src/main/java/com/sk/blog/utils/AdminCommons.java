@@ -1,15 +1,12 @@
 package com.sk.blog.utils;
 
 
+import com.sk.blog.bean.Categories;
 import com.sk.blog.bean.Metas;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
-/**
- * 后台公共函数
- * <p>
- * Created by 13 on 2017/2/21.
- */
+
 @Component
 public final class AdminCommons {
 
@@ -19,11 +16,11 @@ public final class AdminCommons {
      * @param cats
      * @return
      */
-    public static boolean exist_cat(Metas category, String cats) {
+    public static boolean exist_cat(String category, String cats) {
         String[] arr = StringUtils.split(cats, ",");
         if (null != arr && arr.length > 0) {
             for (String c : arr) {
-                if (c.trim().equals(category.getName())) {
+                if (c.trim().equals(category)) {
                     return true;
                 }
             }

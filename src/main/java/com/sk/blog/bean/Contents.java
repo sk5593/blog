@@ -1,13 +1,17 @@
 package com.sk.blog.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(value={"categories"})
 public class Contents {
+    private String stringTime;
+
     private Integer cid;
 
     private String title;
 
-    private String slug;
-
-    private Integer created;
+    private Long created;
 
     private Integer modified;
 
@@ -19,6 +23,14 @@ public class Contents {
 
     private String tags;
 
+    public String getCategories() {
+        return categories;
+    }
+
+    public void setCategories(String categories) {
+        this.categories = categories;
+    }
+
     private String categories;
 
     private Integer hits;
@@ -27,7 +39,7 @@ public class Contents {
 
     private Boolean allowComment;
 
-    private Boolean allowPing;
+    private Boolean allowStick;
 
     private Boolean allowFeed;
 
@@ -49,21 +61,15 @@ public class Contents {
         this.title = title == null ? null : title.trim();
     }
 
-    public String getSlug() {
-        return slug;
-    }
 
-    public void setSlug(String slug) {
-        this.slug = slug == null ? null : slug.trim();
-    }
-
-    public Integer getCreated() {
+    public Long getCreated() {
         return created;
     }
 
-    public void setCreated(Integer created) {
+    public void setCreated(Long created) {
         this.created = created;
     }
+
 
     public Integer getModified() {
         return modified;
@@ -105,13 +111,7 @@ public class Contents {
         this.tags = tags == null ? null : tags.trim();
     }
 
-    public String getCategories() {
-        return categories;
-    }
 
-    public void setCategories(String categories) {
-        this.categories = categories;
-    }
 
     public Integer getHits() {
         return hits;
@@ -137,12 +137,12 @@ public class Contents {
         this.allowComment = allowComment;
     }
 
-    public Boolean getAllowPing() {
-        return allowPing;
+    public Boolean getAllowStick() {
+        return allowStick;
     }
 
-    public void setAllowPing(Boolean allowPing) {
-        this.allowPing = allowPing;
+    public void setAllowStick(Boolean allowStick) {
+        this.allowStick = allowStick;
     }
 
     public Boolean getAllowFeed() {
@@ -160,4 +160,12 @@ public class Contents {
     public void setContent(String content) {
         this.content = content == null ? null : content.trim();
     }
+    public String getStringTime() {
+        return stringTime;
+    }
+
+    public void setStringTime(String stringTime) {
+        this.stringTime = stringTime;
+    }
+
 }

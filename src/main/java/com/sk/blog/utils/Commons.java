@@ -16,11 +16,6 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * 主题公共函数
- * <p>
- * Created by 13 on 2017/2/21.
- */
 @Component
 public final class Commons {
 
@@ -147,9 +142,9 @@ public final class Commons {
      * @param contents
      * @return
      */
-    public static String permalink(Contents contents) {
-        return permalink(contents.getCid(), contents.getSlug());
-    }
+//    public static String permalink(Contents contents) {
+//        return permalink(contents.getCid(), contents.getSlug());
+//    }
 
 
     /**
@@ -256,7 +251,7 @@ public final class Commons {
     }
 
     /**
-     * 显示文章内容，转换markdown为html
+     * 显示文章内容，转换markdown为html,给用户展示
      *
      * @param value
      * @return
@@ -268,19 +263,6 @@ public final class Commons {
         }
         return "";
     }
-
-    /**
-     * 显示文章缩略图，顺序为：文章第一张图 -> 随机获取
-     *
-     * @return
-     */
-    public static String show_thumb(Contents contents) {
-        int cid = contents.getCid();
-        int size = cid % 20;
-        size = size == 0 ? 1 : size;
-        return "/user/img/rand/" + size + ".jpg";
-    }
-
 
     /**
      * An :grinning:awesome :smiley:string &#128516;with a few :wink:emojis!
@@ -320,29 +302,6 @@ public final class Commons {
 
     private static final String[] ICONS = {"bg-ico-book", "bg-ico-game", "bg-ico-note", "bg-ico-chat", "bg-ico-code", "bg-ico-image", "bg-ico-web", "bg-ico-link", "bg-ico-design", "bg-ico-lock"};
 
-    /**
-     * 显示文章图标
-     *
-     * @param cid
-     * @return
-     */
-    public static String show_icon(int cid) {
-        return ICONS[cid % ICONS.length];
-    }
 
-    /**
-     * 获取社交的链接地址
-     *
-     * @return
-     */
-    public static Map<String, String> social() {
-        final String prefix = "social_";
-        Map<String, String> map = new HashMap<>();
-        map.put("weibo", WebConst.initConfig.get(prefix + "weibo"));
-        map.put("zhihu", WebConst.initConfig.get(prefix + "zhihu"));
-        map.put("github", WebConst.initConfig.get(prefix + "github"));
-        map.put("twitter", WebConst.initConfig.get(prefix + "twitter"));
-        return map;
-    }
 
 }

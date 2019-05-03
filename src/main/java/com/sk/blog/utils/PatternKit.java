@@ -1,8 +1,6 @@
 package com.sk.blog.utils;
 
-/**
- * Created by BlueT on 2017/3/16.
- */
+
 
 import java.util.regex.Pattern;
 

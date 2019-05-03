@@ -2,14 +2,10 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <body>
 <!--PageInfo  上一页  下一页 page  -->
-<div class="center" th:fragment="pageNav(pageInfo, prevText, nextText, prefix)">
+<div class="sk2" th:fragment="pageNav(pageInfo, prevText, nextText, prefix)">
 <ol class="pagination">
     <style>
-
-        /*ol.pagination li a {*/
-            /*border: 1px solid #ddd; !* Gray *!*/
-        /*}*/
-        div.center {
+        div.sk2 {
             text-align: center;
         }
         ol.pagination {
@@ -19,7 +15,6 @@
         }
 
         ol.pagination li {display: inline;}
-
         ol.pagination li a {
             color: black;
             float: left;
@@ -33,7 +28,6 @@
             color: white;
             border-radius: 5px;
         }
-
         ol.pagination li a:hover:not(.active) {background-color: #ddd;}
     </style>
     <!--如果有上一页， 提供一个 a标签，跳转到 /page/(上一页的下标)
@@ -54,7 +48,7 @@
 
     <!--下一页，同上-->
     <th:block th:if="${pageInfo.hasNextPage}">
-        <li class="next"><a th:href="@{'/'+${prefix}+'/'+${pageInfo.nextPage}}" th:text="${nextText}"></a></li>
+        <li class="next"><a th:href="@{'/'+${prefix}+'/'+${pageInfo.nextPage}}" th:text="${nextText}" ></a></li>
     </th:block>
 
 </ol>

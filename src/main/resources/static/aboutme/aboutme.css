@@ -3,7 +3,11 @@
 }
 @media screen and (min-width: 768px) {
     #wordsView{
+        position: relative;
         margin: 0 19%;
+
+        z-index: auto;
+
     }
     .things{
         font-size: 20px;
@@ -52,9 +56,10 @@ blockquote ul li{
     padding: 20px 0;
 }
 .zhy-life-title{
-    /*text-align: center;*/
+    text-align: center;
     font-size: 32px;
     font-weight: 500;
+    width: 400px;
 }
 /*初衷*/
 .zhy-original-title-h1{

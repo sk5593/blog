@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="index/header::header(title='文章归档',keywords=null)"></div>
+<head>
+        <div th:replace="index/header2::header2('文章管理',null)"></div>
+</head>
+
+
+<!--[if lt IE 9]>
+<script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<!--<div th:replace="index/header::header(title='文章归档',keywords=null)"></div>-->
+
 <body>
-<div th:replace="index/sidebar::sidebar" class="sidebar"></div>
+<!--背景动画-->
+<canvas id="c_n9" width="1920" height="990"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<script src="/codingLife/canvas-nest.min.js.下载"></script>
+<canvas id="c_n4" width="1037" height="920"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+
+<!--<div th:replace="index/sidebar::sidebar" class="sidebar"></div>-->
+<!--<div th:replace="index/rightsidebar::rightsidebar" ></div>-->
 <div class="main-content archive-page clearfix">
     <div class="categorys-item">
         <th:block th:each="archive : ${archives}">
             <div class="categorys-title" th:if="${archive.temp}=='archives'" th:text="${archive.data}+'('+${archive.count}+')'"></div>
             <div class="categorys-title" th:if="${archive.temp}=='category'" th:text="${archive.cname}+'('+${archive.count}+')'"></div>
-            <div class="post-lists">
+            <div class="post-lists-archives">
                 <div class="post-lists-body">
                     <th:block th:each="article : ${archive.articleList}">
                         <div class="post-list-item">
-                            <div class="post-list-item-container">
+                            <div class="post-list-item-container" th:onclick="|href('@{/article/}${article.cid}')|">
                                 <div class="item-label">
                                     <div class="item-title">
-                                        <a th:href="@{/article/}+${article.cid}" th:text="${article.title}"></a>
+                                        <span  th:text="${article.title}"></span>
                                     </div>
                                     <div class="item-meta clearfix">
-                                        <div class="item-meta-date">发布于 <th:block th:text="${commons.fmtdate(article.created)}"/></div>
+                                        <div class="item-meta-date">发布于 <th:block th:text="${#dates.format(article.created,'yyyy-MM-dd HH:mm:ss')}"/></div>
                                     </div>
                                 </div>
                             </div>
@@ -30,5 +47,16 @@
     </div>
 </div>
 </body>
-<div th:replace="index/footer::footer"></div>
+<script>
+    function href(addr)
+    {
+        window.location.href=addr
+    }
+</script>
+<style>
+    .post-list-item-container:hover{
+        background-color: #0a6999;
+    }
+</style>
+<div th:replace="index/footer2::footer2"></div>
 </html>

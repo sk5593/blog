@@ -29,6 +29,16 @@ public class Comments {
 
     private String content;
 
+    private String stringCreated;
+
+    public String getStringCreated() {
+        return stringCreated;
+    }
+
+    public void setStringCreated(String stringCreated) {
+        this.stringCreated = stringCreated;
+    }
+
     public Integer getCoid() {
         return coid;
     }

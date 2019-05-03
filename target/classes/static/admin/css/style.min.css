@@ -3,7 +3,9 @@ body {
     font-family: 'Noto Sans', sans-serif;
     margin: 0
 }
-
+.about-th{
+ width: 100px;
+}
 html {
     overflow-x: hidden;
     position: relative;
@@ -1329,7 +1331,8 @@ a:focus {
 
 .btn-success, .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open > .dropdown-toggle.btn-success {
     background-color: #33b86c !important;
-    border: 1px solid #33b86c !important
+    border: 1px solid #33b86c !important;
+    margin: 0;
 }
 
 .btn-info, .btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .btn-info.focus, .btn-info:active, .btn-info:focus, .btn-info:hover, .open > .dropdown-toggle.btn-info {

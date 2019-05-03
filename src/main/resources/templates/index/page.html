@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<div th:replace="index/header::header(${article.title},null)"></div>
+<div th:replace="index/header2::header2(${article.title},null)"></div>
 <body>
+<!--背景动画-->
+<canvas id="c_n9" width="1920" height="990"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<script src="/codingLife/canvas-nest.min.js.下载"></script>
+<canvas id="c_n4" width="1037" height="920"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+
 <!--<div th:replace="index/sidebar::sidebar" class="sidebar"></div>-->
 <article class="main-content post-page">
     <div class="post-header">
         <h1 class="post-title" itemprop="name headline" th:text="${article.title}"></h1>
         <div class="post-data">
-            <time th:datetime="${commons.fmtdate(article.created)}" itemprop="datePublished" th:text="'发布于 '+ ${commons.fmtdate(article.created)}"></time>
-            &nbsp阅读数：<span th:text="${article.hits}"></span>
+            <div  itemprop="datePublished" th:text="'发布于 '+ ${#dates.format(article.created,'yyyy-MM-dd HH:mm:ss')}"></div>
+            阅读数：<span th:text="${article.hits}" ></span>&nbsp;评论数：<span th:text="${article.commentsNum}"></span>
         </div>
     </div>
     <div id="post-content" class="post-content" th:utext="${commons.article(article.content)}"></div>
 </article>
 <div th:replace="index/comments::comments"></div>
-<div th:replace="index/footer::footer"></div>
+<div th:replace="index/footer2::footer2"></div>
 </body>
 </html>

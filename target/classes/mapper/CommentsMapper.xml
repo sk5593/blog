@@ -19,6 +19,9 @@
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.sk.blog.bean.Comments">
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
   </resultMap>
+  <select id="selectAllComments" resultMap="BaseResultMap">
+    SELECT * FROM t_comments
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">

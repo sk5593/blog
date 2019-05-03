@@ -1,13 +1,14 @@
 package com.sk.blog.utils;
 
 import org.springframework.http.HttpRequest;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletRequest;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
+@Component
 public class IpAddr {
-    public String getIp(HttpServletRequest request)
+    public static String getIp(HttpServletRequest request)
     {
         String ipAddress = request.getHeader("x-forwarded-for");
         if (ipAddress == null || ipAddress.length() == 0 || "unknown".equalsIgnoreCase(ipAddress)) {

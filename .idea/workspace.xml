@@ -2,115 +2,223 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="821bef5c-0302-417d-a6a6-2008e818fc72" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/1547115263.jpeg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutmetimeline.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/comment.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/leaveMessage.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/picturefill.min.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/underscore-min.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/writing.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptionConfig.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/amazeui.min.css" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_0_8_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_atlassian_commonmark_commonmark_ext_gfm_tables_0_8_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_8.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/blog.iml" afterPath="$PROJECT_DIR$/blog.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/BlogApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/BlogApplication.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Comments.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Comments.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Contents.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Contents.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/ContentsExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/ContentsExample.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/User.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyWebMvcConfig.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/constant/WebConst.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/constant/WebConst.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArticleController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AttachController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/BaseController.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/CommentsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/CommentsMapper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/ContentsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/ContentsMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/UserMapper.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArticleService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/IndexService.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/IndexService.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/AdminCommons.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/AdminCommons.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/DateKit.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/DateKit.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/IpAddr.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/IpAddr.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/LogAspect.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/LogAspect.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/MapCache.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/MapCache.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/PatternKit.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/PatternKit.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/TaleUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/TaleUtils.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Tools.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Tools.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/Backup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/Column.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/ColumnCollection.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/FK.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/FKCollection.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/Table.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/TableCollection.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/db/Column.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/db/ColumnCollection.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/db/DataTable.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/backup/db/Row.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CommentsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CommentsMapper.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ContentsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ContentsMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/css/style.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/css/style.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/images/logo.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/js/article.js" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/article.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/js/base.js" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/base.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/js/install.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/js/pagedown-extra.js" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/js/pagedown-extra.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/js/pagedown.js" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/js/pagedown.js" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/380048.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/blog-common.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/bundle-CodingLife-mobile.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/bundle-CodingLife.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/f.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource(1).html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/view" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/codingLife/view(1)" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/user/css/style.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/user/css/style.min.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/380048.css" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/380048.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/InsertCode.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/amp-analytics-0.1.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/amp4ads-host-v0.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/amp4ads-v0.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/analytics.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/blog-common.css" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/blog-common.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/blog-common.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/bundle-CodingLife-mobile.css" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/bundle-CodingLife-mobile.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/bundle-CodingLife.css" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/bundle-CodingLife.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/canvas-nest.min.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/f.txt" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/f.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/gpt.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/hamster.swf.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/icon_weibo_24.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/img.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/indent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/jquery-2.2.0.min.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/lk.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/logo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/mention.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/pubads_impl_2019032901.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/pubads_impl_rendering_2019032901.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/quote.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/sample_face.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/saved_resource" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/saved_resource(1).html" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource(1).html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/saved_resource.html" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/saved_resource.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/share.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/view" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/view" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/view(1)" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/view(1)" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/1547115263.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutme.css" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/aboutme.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutmetimeline.css" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/aboutmetimeline.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/all.css" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/all.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.js.下载" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/amazeui.min.js.下载" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/comment.css" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/comment.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/font-awesome.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/font-awesome.min.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/leaveMessage.js.下载" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/loading.gif" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/picturefill.min.js.下载" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/picturefill.min.js.下载" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/underscore-min.js.下载" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/underscore-min.js.下载" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/writing.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/article_edit.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/article_edit.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/article_list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/article_list.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/category.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/comment_list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/comment_list.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/footer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/footer.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/header.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/links.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/links.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/profile.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/profile.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/setting.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/comm/error_404.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/404.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/comm/error_500.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/error/500.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/comm/macros.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/comm/macros.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/archives.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/archives.html" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/comments.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/comments.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/footer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/footer.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/header.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/page-category.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/sidebar.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/sidebar.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/footer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/header.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/page.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/page.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/sidebar.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sk/blog/BlogApplicationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/sk/blog/BlogApplicationTests.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.properties" afterPath="$PROJECT_DIR$/target/classes/application-dev.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/BlogApplication.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/BlogApplication.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Comments.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Comments.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/CommentsExample.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Contents.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Contents.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$Criterion.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/ContentsExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Logs.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Logs.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/LogsExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Metas.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Metas.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/MetasExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Options.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/Options.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/OptionsExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsKey.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/RelationshipsKey.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/User.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/User.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$Criteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$Criterion.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample$GeneratedCriteria.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/bean/UserExample.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/config/MyWebMvcConfig$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/config/MyWebMvcConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/constant/WebConst.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/constant/WebConst.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/ArticleController.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/ArticleController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/AttachController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/BaseController.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/IndexController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/CommentsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/CommentsMapper.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/ContentsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/ContentsMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/LogsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/LogsMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/MetasMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/MetasMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/OptionsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/OptionsMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/RelationshipsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/RelationshipsMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/dao/UserMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/service/ArticleService.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/service/ArticleService.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/service/IndexService.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/service/IndexService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/AdminCommons.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/AdminCommons.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Commons.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Commons.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/DateKit$1.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/DateKit$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/DateKit.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/DateKit.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/IPKit.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/IPKit.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/IpAddr.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/IpAddr.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/LogAspect.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/LogAspect.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/MapCache$CacheObject.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/MapCache$CacheObject.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/MapCache.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/MapCache.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/PatternKit.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/PatternKit.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/TaleUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/TaleUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Tools.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Tools.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/UUID.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/UUID.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/ZipUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/ZipUtils.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/Backup.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/Column.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/ColumnCollection.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/FK.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/FKCollection.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/Table.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/TableCollection.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/db/Column.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/db/ColumnCollection.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/db/DataTable.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/backup/db/Row.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentsMapper.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/ContentsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ContentsMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/css/style.min.css" afterPath="$PROJECT_DIR$/target/classes/static/admin/css/style.min.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/images/logo.png" afterPath="$PROJECT_DIR$/target/classes/static/admin/images/logo.png" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/js/article.js" afterPath="$PROJECT_DIR$/target/classes/static/admin/js/article.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/js/base.js" afterPath="$PROJECT_DIR$/target/classes/static/admin/js/base.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/js/install.js" afterPath="$PROJECT_DIR$/target/classes/static/admin/js/install.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/css/style.css" afterPath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/js/pagedown-extra.js" afterPath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/js/pagedown-extra.js" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/js/pagedown.js" afterPath="$PROJECT_DIR$/target/classes/static/admin/plugins/md/js/pagedown.js" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/user/css/style.min.css" afterPath="$PROJECT_DIR$/target/classes/static/user/css/style.min.css" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/380048.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/InsertCode.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/amp-analytics-0.1.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/amp4ads-host-v0.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/amp4ads-v0.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/analytics.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/b.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/blog-common.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/blog-common.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/bundle-CodingLife-mobile.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/bundle-CodingLife.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/canvas-nest.min.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/f.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/gpt.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/hamster.swf.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/icon_weibo_24.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/img.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/indent.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/jquery-2.2.0.min.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/lk.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/logo.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/mention.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/pubads_impl_2019032901.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/pubads_impl_rendering_2019032901.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/quote.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/sample_face.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/saved_resource" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/saved_resource(1).html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/saved_resource.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/share.js.下载" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/view" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/博客园 - 代码改变世界_files/view(1)" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/article_edit.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/article_edit.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/article_list.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/article_list.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/category.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/category.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/comment_list.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/comment_list.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/footer.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/footer.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/header.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/header.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/links.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/links.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/login.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/login.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/profile.html" afterPath="$PROJECT_DIR$/target/classes/templates/admin/profile.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/setting.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/comm/error_404.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/comm/error_500.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/comm/macros.html" afterPath="$PROJECT_DIR$/target/classes/templates/comm/macros.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index/archives.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/archives.html" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index/comments.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/comments.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/footer.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/footer.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/header.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/header.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/footer.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/header.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/page-category.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/sidebar.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/sidebar.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/test.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/page.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/page.html" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/sidebar.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/sk/blog/BlogApplicationTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/sk/blog/BlogApplicationTests.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -121,23 +229,117 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="blog" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="aboutme.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="aboutme.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="281" column="53" lean-forward="false" selection-start-line="281" selection-start-column="53" selection-end-line="281" selection-end-column="53" />
+            <state relative-caret-position="-1004">
+              <caret line="240" column="27" lean-forward="false" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
+              <folding>
+                <marker date="1556849414972" expanded="false" signature="7504:7530" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="33">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
+      <file leaf-file-name="messagesBoard_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/messagesBoard_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1419">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="1089">
+              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminIndexController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminIndexController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AdminMessagesBoardController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminMessagesBoardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutMeMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AboutMeMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="99">
+              <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="35" />
+              <folding>
+                <marker date="1556845266978" expanded="true" signature="244:296" ph="DELETE FROM t_messagesboard... " />
+                <marker date="1556845266978" expanded="true" signature="383:484" ph="SELECT count... t_messagesboard" />
+                <marker date="1556845266978" expanded="true" signature="590:675" ph="SELECT * FRO... t_messagesboard" />
+                <marker date="1556845266978" expanded="true" signature="777:844" ph="SELECT * FRO... t_messagesboard" />
+                <marker date="1556845266978" expanded="true" signature="928:972" ph="SELECT count... t_messagesboard" />
+                <marker date="1556845266978" expanded="true" signature="1033:1154" ph="INSERT INTO t_messagesboard... " />
+                <marker date="1556845266978" expanded="true" signature="1245:1327" ph="SELECT aid,a... t_about" />
+                <marker date="1556845266978" expanded="true" signature="1375:1480" ph="INSERT INTO t_about... " />
+                <marker date="1556845266978" expanded="true" signature="1528:1574" ph="DELETE FROM t_about... " />
+                <marker date="1556845266978" expanded="true" signature="1622:1721" ph="UPDATE t_about... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AboutMeMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/dao/AboutMeMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/header2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="284">
+              <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+              <folding>
+                <marker date="1556845547376" expanded="false" signature="2888:2904" ph="..." />
+                <marker date="1556845547376" expanded="false" signature="3065:3081" ph="..." />
+                <marker date="1556845547376" expanded="false" signature="3238:3254" ph="..." />
+                <marker date="1556845547376" expanded="false" signature="4133:4149" ph="..." />
+                <marker date="1556845547376" expanded="false" signature="4306:4322" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-33">
+              <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -148,46 +350,59 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Tag Library Descriptor" />
+        <option value="mybatis-cfg.xml" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>img</find>
-      <find>sidebae</find>
-      <find>image_ad</find>
-      <find>cnblogs</find>
-      <find>post</find>
-      <find>post-lists</find>
-      <find>clearfix</find>
-      <find>lists-navigator</find>
-      <find>center</find>
-      <find>post-list</find>
-      <find>lists-na</find>
-      <find>sidebar</find>
-      <find>main-content</find>
-      <find>clear</find>
-      <find>side</find>
-      <find>logo</find>
-      <find>categorys-title</find>
-      <find>header</find>
-      <find>link</find>
-      <find>sideBar</find>
-      <find>阅读</find>
-      <find>博客园 - 代码改变世界_files</find>
-      <find>留</find>
-      <find>alert</find>
-      <find>visit</find>
-      <find>light</find>
-      <find>getVisitor</find>
-      <find>get</find>
-      <find>getPage</find>
-      <find>all</find>
+      <find>markdown</find>
+      <find>tables</find>
+      <find>text</find>
+      <find>最新文章</find>
+      <find>selectLastUpdate</find>
+      <find>时间格式</find>
+      <find>url</find>
+      <find>article-title</find>
+      <find>last-articles</find>
+      <find>btnPostMsg</find>
+      <find>comment-author</find>
+      <find>messagesBoard</find>
+      <find>getMessagesBoard</find>
+      <find>selectByUsername</find>
+      <find>updateByPrimaryKey</find>
+      <find>selectByUsernameAndPassword</find>
+      <find>login</find>
+      <find>selectLastLogin</find>
+      <find>mysql</find>
+      <find>thymeleaf</find>
+      <find>SELECT FROM_UNIXTIME(created/1000,'%Y</find>
+      <find>.am-topbar</find>
+      <find>.am-topbar-fixed-top</find>
+      <find>amaze</find>
+      <find>pagination</find>
+      <find>simplepagination</find>
+      <find>blo</find>
+      <find>blog</find>
+      <find>title</find>
+      <find>js</find>
     </findStrings>
     <replaceStrings>
       <replace>codingLife</replace>
+      <replace>aboutme</replace>
+      <replace>aid</replace>
+      <replace>index</replace>
+      <replace>comments</replace>
+      <replace>message</replace>
+      <replace>cid</replace>
+      <replace>mid</replace>
+      <replace>ip</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -201,57 +416,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/BlogApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/constant/WebConst.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/utils/backup/db/Row.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/utils/AdminCommons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/utils/backup/Backup.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AttachController/AttachController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/utils/TaleUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AttachController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/utils/Commons.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/test.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/CommentsMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/comm/macros.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/post.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Comments.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/admin/plugins/md/js/md.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/footer.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/ContentsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArticleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/IpAddr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyWebMvcConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/博客园 - 代码改变世界.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArticleController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/admin/css/style.min.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/page.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/backgrount.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/AdminCommons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/DateKit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Contents.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Tools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/PatternKit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/MapCache.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/LogAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/admin/js/test.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/user/css/style.min.css" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index/comments.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/ContentsExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArchivesService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/CategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/page-category.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Archives.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/博客园 - 代码改变世界_files/bundle-CodingLife.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArchivesController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/ContentsMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ContentsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Contents.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/IndexService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Categories.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/AboutService.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/login.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/AdminUserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/UserMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/CategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArchivesController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AboutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminArticleController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminIndexController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index/test.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ContentsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminCategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptionConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/comm/error_404.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/comm/error_500.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/error/500.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminAboutController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index/archives.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/sidebar.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/header.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lightgallery.min.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/all.js.下载" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/leaveMessage.js.下载" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/AboutMeMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/AboutMeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminMessagesBoardController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/index/header2.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/messagesBoard_list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index/footer.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
       </list>
     </option>
   </component>
@@ -268,7 +483,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="529" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="1400" />
     <option name="height" value="990" />
   </component>
@@ -287,6 +503,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -360,6 +578,18 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="sk" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="sk" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,7 +605,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="blog" type="b2602c69:ProjectViewProjectNode" />
@@ -384,28 +614,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -416,29 +635,32 @@
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MyBlog-master" />
-    <property name="SearchEverywhereHistoryKey" value="post-lists&#9;null&#9;null&#10;comment-content&#9;null&#9;null&#10;form-control&#9;null&#9;null&#10;comment-container&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="allow_ping&#9;null&#9;null&#10;allowPing&#9;PSI&#9;JAVA://com.sk.blog.bean.ContentsExample.GeneratedCriteria#andAllowPingGreaterThanOrEqualTo&#10;fonts&#9;FILE&#9;file://D:/项目/blog/src/main/resources/static/js/tinymce/skins/lightgray/fonts&#10;slug&#9;null&#9;null&#10;post-lists&#9;null&#9;null&#10;comment-content&#9;null&#9;null&#10;form-control&#9;null&#9;null&#10;comment-container&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.sk.blog.controller.AttachController" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\项目\blog\src\main\resources\templates\error" />
+      <recent name="D:\项目\blog\src\main\resources\static\index" />
+      <recent name="D:\项目\blog\src\main\resources\static\admin\images" />
+      <recent name="D:\项目\blog\src\main\resources\mapper" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.sk.blog" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\项目\blog\src\main\resources\static" />
       <recent name="D:\项目\blog\src\main\resources\templates\index" />
-      <recent name="D:\项目\blog\src\main\resources\static\博客园 - 代码改变世界_files" />
-      <recent name="D:\项目\blog\src\main\resources\static\user\img\rand" />
-      <recent name="D:\项目\blog\src\main\java\com\sk\blog\utils" />
+      <recent name="D:\项目\blog\src\main\resources\static\assets\js" />
+      <recent name="D:\项目\blog\src\main\resources\static" />
+      <recent name="D:\项目\blog\src\main\resources\templates\admin" />
+      <recent name="D:\项目\blog\src\main\resources\static\admin\css" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.sk.blog.controller" />
       <recent name="com.sk.blog.constant" />
       <recent name="com.sk.blog.utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\项目\blog\src\main\resources\mapper" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sk.blog.controller.AttachController" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -453,7 +675,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.BlogApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -474,6 +696,31 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="BlogApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.sk.blog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="blog" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.sk.blog" />
+      <option name="MAIN_CLASS_NAME" value="com.sk.blog.BlogApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -541,6 +788,15 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.BlogApplication" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.BlogApplicationTests.contextLoads" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.BlogApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -568,12 +824,71 @@
       <workItem from="1555206972123" duration="15543000" />
       <workItem from="1555244373182" duration="8133000" />
       <workItem from="1555287322619" duration="5287000" />
-      <workItem from="1555325156961" duration="626000" />
+      <workItem from="1555325156961" duration="13761000" />
+      <workItem from="1555376548535" duration="2393000" />
+      <workItem from="1555410285419" duration="9390000" />
+      <workItem from="1555461163614" duration="1854000" />
+      <workItem from="1555463102465" duration="11569000" />
+      <workItem from="1555494840889" duration="7557000" />
+      <workItem from="1555510261555" duration="3136000" />
+      <workItem from="1555543307162" duration="445000" />
+      <workItem from="1555543940950" duration="13514000" />
+      <workItem from="1555594711424" duration="1893000" />
+      <workItem from="1555632240404" duration="15279000" />
+      <workItem from="1555657361555" duration="3748000" />
+      <workItem from="1555717349466" duration="5302000" />
+      <workItem from="1555724020745" duration="7790000" />
+      <workItem from="1555758265198" duration="4474000" />
+      <workItem from="1555820257441" duration="14628000" />
+      <workItem from="1555891249060" duration="6283000" />
+      <workItem from="1555915953843" duration="9636000" />
+      <workItem from="1555933033555" duration="10638000" />
+      <workItem from="1555972036134" duration="10103000" />
+      <workItem from="1556002160985" duration="3298000" />
+      <workItem from="1556017428819" duration="4294000" />
+      <workItem from="1556063711810" duration="3579000" />
+      <workItem from="1556103157180" duration="9357000" />
+      <workItem from="1556158119384" duration="7214000" />
+      <workItem from="1556187936235" duration="580000" />
+      <workItem from="1556197439543" duration="3074000" />
+      <workItem from="1556247126844" duration="3882000" />
+      <workItem from="1556266635828" duration="5096000" />
+      <workItem from="1556328429166" duration="7333000" />
+      <workItem from="1556412209225" duration="11937000" />
+      <workItem from="1556447822406" duration="9236000" />
+      <workItem from="1556496389967" duration="5718000" />
+      <workItem from="1556532082807" duration="9392000" />
+      <workItem from="1556608047103" duration="2055000" />
+      <workItem from="1556623288903" duration="4432000" />
+      <workItem from="1556670546671" duration="4152000" />
+      <workItem from="1556690464018" duration="5022000" />
+      <workItem from="1556768205343" duration="11007000" />
+      <workItem from="1556796293934" duration="3743000" />
+      <workItem from="1556844561572" duration="3790000" />
     </task>
+    <task id="LOCAL-00001" summary="文章归档，文章分类">
+      <created>1555325796890</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1555325796890</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="BlogApplicationTests_contextLoads - 2019.04.17 at 09h 22m 33s.xml">
+      <configuration name="BlogApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlogApplicationTests_contextLoads - 2019.04.17 at 09h 23m 57s.xml">
+      <configuration name="BlogApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BlogApplicationTests_contextLoads - 2019.04.17 at 09h 26m 52s.xml">
+      <configuration name="BlogApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84853000" />
+    <option name="totallyTimeSpent" value="355811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,41 +903,77 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="CDI" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24370709" sideWeight="0.50429183" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993135" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26887873" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2918455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3993135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.49785408" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18421052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.49570817" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24370709" sideWeight="0.49785408" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837528" sideWeight="0.49785408" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3272311" sideWeight="0.49785408" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16845493" sideWeight="0.49333334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2274678" sideWeight="0.50666666" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18421052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -633,372 +984,456 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="38" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/user/img/rand/1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/LogsExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/MapCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5412">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state relative-caret-position="33">
+          <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/ContentsExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="706" column="52" lean-forward="false" selection-start-line="706" selection-start-column="45" selection-end-line="706" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="107" column="37" lean-forward="false" selection-start-line="107" selection-start-column="22" selection-end-line="107" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArchivesService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="54" lean-forward="true" selection-start-line="20" selection-start-column="54" selection-end-line="20" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Comments.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/page-category.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Archives.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/codingLife/bundle-CodingLife.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="581" column="1" lean-forward="true" selection-start-line="581" selection-start-column="1" selection-end-line="581" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArchivesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Contents.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="109" column="5" lean-forward="true" selection-start-line="109" selection-start-column="5" selection-end-line="109" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/dao/ContentsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        <state relative-caret-position="198">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/service/CategoryService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/CategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-1049">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="-99">
+          <caret line="9" column="28" lean-forward="false" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Categories.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding>
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#382#383#0" expanded="false" />
-            <element signature="e#416#417#0" expanded="false" />
-            <element signature="e#447#448#0" expanded="false" />
-            <element signature="e#474#475#0" expanded="false" />
-            <element signature="e#504#505#0" expanded="false" />
-            <element signature="e#530#531#0" expanded="false" />
-            <element signature="e#569#570#0" expanded="false" />
-            <element signature="e#599#600#0" expanded="false" />
-            <element signature="e#631#632#0" expanded="false" />
-            <element signature="e#659#660#0" expanded="false" />
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#735#736#0" expanded="false" />
-            <element signature="e#774#775#0" expanded="false" />
-            <element signature="e#808#809#0" expanded="false" />
-            <element signature="e#856#857#0" expanded="false" />
-            <element signature="e#895#896#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/service/IndexService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="23" column="30" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="132">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="54" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.ie8polyfill.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ContentsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="292">
+          <caret line="158" column="22" lean-forward="false" selection-start-line="158" selection-start-column="22" selection-end-line="158" selection-end-column="22" />
           <folding>
-            <marker date="1555251823951" expanded="true" signature="2006:2114" ph="SELECT c.cid... t_contents" />
-            <marker date="1555251823951" expanded="true" signature="2006:2115" ph="SELECT c.cid... t_contents" />
-            <marker date="1555251823951" expanded="true" signature="2184:2227" ph="SELECT cname... t_category" />
-            <marker date="1555251823951" expanded="true" signature="2318:2350" ph="SELECT kid,c... t_category" />
-            <marker date="1555251823951" expanded="true" signature="2442:2553" ph="SELECT * FRO... t_contents" />
-            <marker date="1555251823951" expanded="true" signature="2639:2727" ph="SELECT FROM_... " />
-            <marker date="1555251823951" expanded="true" signature="2639:2732" ph="SELECT FROM_... " />
-            <marker date="1555251823951" expanded="true" signature="2818:2870" ph="UPDATE t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="6407:6562" ph="select , fro... " />
-            <marker date="1555251823951" expanded="true" signature="6648:6710" ph="delete from t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="6808:6830" ph="delete from t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="7004:7712" ph="insert into t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="10416:10447" ph="select count... t_contents" />
-            <marker date="1555251823951" expanded="true" signature="12541:13386" ph="update t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="13557:14346" ph="update t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="14551:16030" ph="update t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="16133:16869" ph="update t_contents... " />
-            <marker date="1555251823951" expanded="true" signature="16963:17650" ph="update t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="1998:2096" ph="SELECT title... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="2149:2235" ph="UPDATE t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="2318:2419" ph="SELECT comme... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="2745:2803" ph="SELECT COUNT... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="2886:2944" ph="SELECT COUNT... t_comments" />
+            <marker date="1556775293480" expanded="true" signature="3020:3077" ph="SELECT MAX(c... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="3133:3206" ph="UPDATE t_category... " />
+            <marker date="1556775293480" expanded="true" signature="3271:3324" ph="DELETE FROM t_relationship... " />
+            <marker date="1556775293480" expanded="true" signature="3382:3462" ph="UPDATE t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="3518:3567" ph="DELETE FROM t_category... " />
+            <marker date="1556775293480" expanded="true" signature="3642:3697" ph="INSERT INTO t_category... " />
+            <marker date="1556775293480" expanded="true" signature="3777:3903" ph="SELECT count... " />
+            <marker date="1556775293480" expanded="true" signature="4001:4125" ph="SELECT c.cid... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="4217:4418" ph="SELECT c.cid... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="4478:4535" ph="INSERT INTO t_relationship... " />
+            <marker date="1556775293480" expanded="true" signature="4615:4675" ph="SELECT cname... t_category" />
+            <marker date="1556775293480" expanded="true" signature="4762:5009" ph="SELECT c.cid... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="5082:5136" ph="SELECT kid F... t_category" />
+            <marker date="1556775293480" expanded="true" signature="5217:5324" ph="SELECT count... " />
+            <marker date="1556775293480" expanded="true" signature="5524:5684" ph="SELECT c.cid... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="5756:5859" ph="SELECT c.cid... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="5930:5973" ph="SELECT cname... t_category" />
+            <marker date="1556775293480" expanded="true" signature="6066:6098" ph="SELECT kid,c... t_category" />
+            <marker date="1556775293480" expanded="true" signature="6192:6335" ph="SELECT title... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="6423:6547" ph="SELECT FROM_... " />
+            <marker date="1556775293480" expanded="true" signature="6423:6569" ph="SELECT FROM_... " />
+            <marker date="1556775293480" expanded="true" signature="6658:6710" ph="UPDATE t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="11207:11379" ph="select , fro... " />
+            <marker date="1556775293480" expanded="true" signature="11469:11531" ph="delete from t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="11635:11657" ph="delete from t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="11890:12564" ph="insert into t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="15770:15801" ph="select count... t_contents" />
+            <marker date="1556775293480" expanded="true" signature="18151:18985" ph="update t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="19177:19953" ph="update t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="20179:21870" ph="update t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="21977:22677" ph="update t_contents... " />
+            <marker date="1556775293480" expanded="true" signature="22773:23331" ph="update t_contents... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/sidebar.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AboutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="54" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#svg#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#path#1;n#svg#0;n#a#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#canvas#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#object#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="-778">
+          <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2956">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="48" column="35" lean-forward="false" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
+        <state relative-caret-position="94">
+          <caret line="104" column="27" lean-forward="false" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/header.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1486">
+          <caret line="86" column="45" lean-forward="false" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptionConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="76" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="363">
-          <caret line="38" column="43" lean-forward="false" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
-          <folding>
-            <marker date="1555290352364" expanded="true" signature="1693:1815" ph="..." />
-          </folding>
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/1547115263.jpeg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/IpAddr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutme.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/LogAspect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/aboutmetimeline.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/PatternKit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="363">
+          <caret line="11" column="19" lean-forward="false" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/all.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/TaleUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="13" column="30" lean-forward="true" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="7887">
+          <caret line="265" column="14" lean-forward="false" selection-start-line="265" selection-start-column="7" selection-end-line="265" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/error/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/links.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/old_comments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/post.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/footer2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/comments.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="41" column="67" lean-forward="false" selection-start-line="41" selection-start-column="67" selection-end-line="41" selection-end-column="67" />
+        <state relative-caret-position="1188">
+          <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/wxgzh.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/weixin.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/underscore-min.js.下载">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/CategoryController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2805">
-          <caret line="2" column="49" lean-forward="true" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        <state relative-caret-position="2838">
+          <caret line="99" column="24" lean-forward="false" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/writing.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/photo2.jpg" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/picturefill.min.js.下载">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArchivesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        <state relative-caret-position="1749">
+          <caret line="66" column="16" lean-forward="false" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/loading.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Categories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lightgallery.min.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lightgallery.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lg-fullscreen.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lg-autoplay.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/links.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Archives.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="264">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/archives.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-495">
-          <caret line="7" column="50" lean-forward="false" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        <state relative-caret-position="396">
+          <caret line="39" column="38" lean-forward="false" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/comment.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminAboutController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="469">
+          <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-521">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminCommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-983">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminArticleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2970">
+          <caret line="104" column="16" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-620">
+          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminIndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AboutMeMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="35" />
           <folding>
-            <element signature="e#41987#42310#1" expanded="false" />
-            <element signature="e#171285#172400#2" expanded="false" />
-            <element signature="e#173179#175302#2" expanded="false" />
-            <element signature="e#175449#177656#2" expanded="false" />
-            <element signature="e#177808#178199#2" expanded="false" />
+            <marker date="1556845266978" expanded="true" signature="244:296" ph="DELETE FROM t_messagesboard... " />
+            <marker date="1556845266978" expanded="true" signature="383:484" ph="SELECT count... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="590:675" ph="SELECT * FRO... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="777:844" ph="SELECT * FRO... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="928:972" ph="SELECT count... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="1033:1154" ph="INSERT INTO t_messagesboard... " />
+            <marker date="1556845266978" expanded="true" signature="1245:1327" ph="SELECT aid,a... t_about" />
+            <marker date="1556845266978" expanded="true" signature="1375:1480" ph="INSERT INTO t_about... " />
+            <marker date="1556845266978" expanded="true" signature="1528:1574" ph="DELETE FROM t_about... " />
+            <marker date="1556845266978" expanded="true" signature="1622:1721" ph="UPDATE t_about... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/font-awesome.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/dao/AboutMeMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-198">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="165">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lg-pager.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/lg-zoom.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/all.js.下载" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/leaveMessage.js.下载">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminMessagesBoardController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="317" column="7" lean-forward="false" selection-start-line="317" selection-start-column="7" selection-end-line="317" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/刚子笔记 _ 关于我_files/amazeui.min.js.下载">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="5" column="26845" lean-forward="false" selection-start-line="5" selection-start-column="26845" selection-end-line="5" selection-end-column="26845" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1419">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="204" column="11" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="204" selection-end-column="11" />
+        <state relative-caret-position="330">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
           <folding>
-            <element signature="e#1988#1994#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-33">
+          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/header2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <marker date="1556845547376" expanded="false" signature="2888:2904" ph="..." />
+            <marker date="1556845547376" expanded="false" signature="3065:3081" ph="..." />
+            <marker date="1556845547376" expanded="false" signature="3238:3254" ph="..." />
+            <marker date="1556845547376" expanded="false" signature="4133:4149" ph="..." />
+            <marker date="1556845547376" expanded="false" signature="4306:4322" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/messagesBoard_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1089">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/aboutme.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="281" column="53" lean-forward="false" selection-start-line="281" selection-start-column="53" selection-end-line="281" selection-end-column="53" />
+        <state relative-caret-position="-1004">
+          <caret line="240" column="27" lean-forward="false" selection-start-line="240" selection-start-column="27" selection-end-line="240" selection-end-column="27" />
+          <folding>
+            <marker date="1556849414972" expanded="false" signature="7504:7530" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>

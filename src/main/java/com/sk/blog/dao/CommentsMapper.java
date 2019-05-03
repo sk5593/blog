@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public interface CommentsMapper {
+    List<Comments> selectAllComments();
     long countByExample(CommentsExample example);
 
     int deleteByExample(CommentsExample example);

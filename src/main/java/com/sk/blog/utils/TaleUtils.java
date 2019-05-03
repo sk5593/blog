@@ -1,9 +1,7 @@
 package com.sk.blog.utils;
 
 
-import com.sk.blog.bean.User;
 import com.sk.blog.constant.WebConst;
-import com.sk.blog.controller.AttachController;
 import org.apache.commons.lang3.StringUtils;
 import org.commonmark.Extension;
 import org.commonmark.ext.gfm.tables.TablesExtension;
@@ -18,13 +16,13 @@ import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.awt.*;
 import java.io.*;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.Normalizer;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
@@ -138,20 +136,6 @@ public class TaleUtils {
     }
 
     /**
-     * 返回当前登录用户
-     *
-     * @return
-     */
-    public static User getLoginUser(HttpServletRequest request) {
-        HttpSession session = request.getSession();
-        if (null == session) {
-            return null;
-        }
-        return (User) session.getAttribute(WebConst.LOGIN_SESSION_KEY);
-    }
-
-
-    /**
      * 获取cookie中的用户id
      *
      * @param request
@@ -249,17 +233,17 @@ public class TaleUtils {
      * @param session
      * @param response
      */
-    public static void logout(HttpSession session, HttpServletResponse response) {
-        session.removeAttribute(WebConst.LOGIN_SESSION_KEY);
-        Cookie cookie = new Cookie(WebConst.USER_IN_COOKIE, "");
-        cookie.setMaxAge(0);
-        response.addCookie(cookie);
-        try {
-            response.sendRedirect(Commons.site_url());
-        } catch (IOException e) {
-            LOGGER.error(e.getMessage(), e);
-        }
-    }
+//    public static void logout(HttpSession session, HttpServletResponse response) {
+//        session.removeAttribute(WebConst.LOGIN_SESSION_KEY);
+//        Cookie cookie = new Cookie(WebConst.USER_IN_COOKIE, "");
+//        cookie.setMaxAge(0);
+//        response.addCookie(cookie);
+//        try {
+//            response.sendRedirect(Commons.site_url());
+//        } catch (IOException e) {
+//            LOGGER.error(e.getMessage(), e);
+//        }
+//    }
 
     /**
      * 替换HTML脚本
@@ -425,5 +409,16 @@ public class TaleUtils {
         path = path.substring(0, lastIndex);
         File file = new File("");
         return file.getAbsolutePath() + "/";
+    }
+    /**
+     * 时间戳转化为格式化时间
+     */
+    public static String formatDate(Long created)
+    {
+        Date date =new Date();
+        date.setTime(created);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = sdf.format(date);
+        return format;
     }
 }

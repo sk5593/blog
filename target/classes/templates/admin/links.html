@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:with="title='友链管理',active='links'">
 <header th:replace="admin/header::headerFragment(${title},${active})"></header>
+<script src="../kindeditor/kindeditor-all-min.js"></script>
+<script charset="UTF-8" src="/kindeditor/lang/zh-CN.js"></script>
+<script type="text/javascript">
+
+    KindEditor.ready(function (K) {
+        window.editor = K.create('#atext', {
+            items: [
+                'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
+                'insertunorderedlist', 'i', 'emoticons', 'link'
+            ],
+            //不可以拖动
+            resizeType: 0,
+            minHeight: 50,
+            //设置字体大小
+            cssData: 'body {font-size:14px;}',
+            //数据同步
+            afterBlur: function () {
+                this.sync();
+            },
+            afterCreate: function () {
+                K.html("#atext", "请输入内容...")
+            },
+            //聚焦时清空初始化
+            afterFocus: function () {
+                if (editor.html() == "请输入内容...")
+                    K.html("#atext", "")
+            }
+        })
+    })
+</script>
 <body class="fixed-left">
 <div id="wrapper">
     <div th:replace="admin/header::header-body"></div>
@@ -9,31 +40,32 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h4 class="page-title">友链管理</h4>
+                        <h4 class="page-title">关于管理</h4>
                     </div>
                     <div class="col-md-12">
                         <table class="table table-striped table-bordered">
                             <thead>
                             <tr>
-                                <th>链接名称</th>
-                                <th>链接地址</th>
-                                <th>链接LOGO</th>
-                                <th>链接排序</th>
-                                <th>操作</th>
+                                <th class="about-th">类型</th>
+                                <th class="about-th">文本</th>
+                                <th class="about-th">标题</th>
+                                <th class="about-th">创建时间</th>
+                                <th class="about-th">操作</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <th:block th:each="link : ${links}">
-                                <tr th:attr="mid=${link.mid}">
-                                    <td th:text="${link.name}"></td>
-                                    <td><a th:href="@{${link.slug}}" target="_blank" th:text="${link.slug}"></a></td>
-                                    <td th:text="${link.description}"></td>
-                                    <td th:text="${link.sort}"></td>
+                            <th:block th:each="about : ${abouts}">
+                                <tr th:attr="aid=${about.aid}">
+                                    <td th:text="${about.aname}"></td>
+                                    <!--<td><a th:href="@{${link.slug}}" target="_blank" th:text="${link.slug}"></a></td>-->
+                                    <td th:utext="${about.atext}"></td>
+                                    <td th:text="${about.atitle}"></td>
+                                    <td th:text="${#dates.format(about.acreated,'yyyy-MM-dd HH:mm:ss')}"></td>
                                     <td>
-                                        <a href="javascript:void(0)" onclick="editLink(this);"
+                                        <a href="#panel-body" onclick="eyyditLink(this);"
                                            class="btn btn-primary btn-sm waves-effect waves-light m-b-5"><i
                                                 class="fa fa-edit"></i> <span>编辑</span></a>
-                                        <a href="javascript:void(0)" th:onclick="'delLink('+${link.mid}+');'"
+                                        <a href="javascript:void(0)" th:onclick="'delLink('+${about.aid}+');'"
                                            class="btn btn-danger btn-sm waves-effect waves-light m-b-5"><i
                                                 class="fa fa-trash-o"></i> <span>删除</span></a>
                                     </td>
@@ -45,37 +77,40 @@
                     <div class="row">
                         <div class="col-md-12" style="padding: 20px;">
                             <div class="panel panel-primary">
-                                <div class="panel-heading"><h3 class="panel-title">保存友链</h3></div>
-                                <div class="panel-body">
+                                <div class="panel-heading"><h3 class="panel-title">保存</h3></div>
+                                <div class="panel-body" id="panel-body">
 
                                     <form id="linkForm" class="form-inline" role="form" novalidate="novalidate">
 
-                                        <input type="hidden" id="mid" name="mid"/>
-
+                                        <input type="hidden" id="aid" name="aid"/>
                                         <div class="form-group">
-                                            <label class="sr-only">链接标题</label>
-                                            <input type="text" id="title" name="title" class="form-control" placeholder="请输入链接标题"
+                                            <label class="sr-only">类型</label>
+                                            <input type="text" id="aname" name="aname" class="form-control"
+                                                   placeholder="请输入类型"
                                                    required="required" aria-required="true"/>
                                         </div>
-
                                         <div class="form-group">
-                                            <label class="sr-only">链接URL</label>
-                                            <input type="url" id="url" name="url" class="form-control" placeholder="请输入链接地址" required="required"
-                                                   aria-required="true"/>
+                                            <label class="sr-only">标题</label>
+                                            <input type="text" id="atitle" name="atitle" class="form-control"
+                                                   placeholder="请输入标题，没有则不输入"/>
                                         </div>
-
+                                        <br>
+                                        <!--<div class="form-group">-->
+                                        <!--<label class="sr-only">文本</label>-->
+                                        <!--<input type="text" id="atext" name="atext" class="form-control"-->
+                                        <!--placeholder="请输入文本" required="required"-->
+                                        <!--aria-required="true"/>-->
+                                        <!--</div>-->
                                         <div class="form-group">
-                                            <label class="sr-only">链接LOGO</label>
-                                            <input type="url" id="logo" name="logo" class="form-control"
-                                                   placeholder="请输入链接LOGO，没有则不输入"/>
+                                            <label class="sr-only">文本</label>
+                                            <textarea id="atext" name="atext" class="form-control"
+                                                      required="required"
+                                                      aria-required="true"></textarea>
                                         </div>
-
-                                        <div class="form-group">
-                                            <label class="sr-only">链接排序</label>
-                                            <input type="number" id="sort" name="sort" class="form-control" value="0"/>
-                                        </div>
-
-                                        <button type="submit" class="btn btn-success waves-effect waves-light m-l-10">保存链接</button>
+                                        <br>
+                                        <button type="submit" class="btn btn-success waves-effect waves-light m-l-10"
+                                                id="aboutbutton">保存
+                                        </button>
                                     </form>
                                 </div> <!-- panel-body -->
                             </div> <!-- panel -->
@@ -89,65 +124,79 @@
     </div>
 </div>
 <div th:replace="admin/footer :: footer"></div>
-<script src="//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-<script src="//cdn.bootcss.com/jquery-validate/1.15.1/localization/messages_zh.min.js"></script>
+<!--<script src="//cdn.bootcss.com/jquery-validate/1.15.1/jquery.validate.min.js"></script>-->
 <script type="text/javascript">
     /*<![CDATA[*/
+
+    // $('#linkForm').validate({
+    //     submitHandler: function (form) {
+    //         var params = $("#linkForm").serialize();
+    //         tale.post({
+    //             url: '/admin/about',
+    //             data: params,
+    //             success: function (result) {
+    //                 $('#linkForm input').val('');
+    //                 if (result && result.success) {
+    //                     tale.alertOkAndReload('保存成功');
+    //                 } else {
+    //                     tale.alertError(result.msg || '保存失败');
+    //                 }
+    //             }
+    //         });
+    //     }
+    // });
     var tale = new $.tale();
+    $("#aboutbutton").click(function () {
+        var params = $("#linkForm").serialize();
+        tale.post({
+            url: '/admin/about',
+            data: params,
+            success: function (result) {
 
-    $('#linkForm').validate({
-        submitHandler: function (form) {
-            var params = $("#linkForm").serialize();
-            tale.post({
-                url : '/admin/links/save',
-                data: params,
-                success: function (result) {
-                    $('#linkForm input').val('');
-                    $('#linkForm #sort').val('0');
-                    if(result && result.success){
-                        tale.alertOkAndReload('友链保存成功');
-                    } else {
-                        tale.alertError(result.msg || '友链保存失败');
-                    }
+                $('#linkForm input').val('');
+                if (result && result.success) {
+                    alert("保存成功")
+                } else {
+                    alert(result.msg())
                 }
-            });
-        }
-    });
+            }
+        });
+    })
 
-    function editLink(obj) {
+    //编辑
+    function eyyditLink(obj) {
         var this_ = $(obj);
+        var aid = this_.parents('tr').attr('aid');
+        var aname = this_.parents('tr').find('td:eq(0)').text();
+        var atext = this_.parents('tr').find('td:eq(1)').text();
+        var atitle = this_.parents('tr').find('td:eq(2)').text();
 
-        var mid = this_.parents('tr').attr('mid');
-        var title = this_.parents('tr').find('td:eq(0)').text();
-        var url = this_.parents('tr').find('td:eq(1)').text();
-        var logo = this_.parents('tr').find('td:eq(2)').text();
-        var sort = this_.parents('tr').find('td:eq(3)').text();
+        $('#linkForm #aid').val(aid);
+        $('#linkForm #aname').val(aname);
+        editor.html(atext);
+        $('#linkForm #atitle').val(atitle);
 
-        $('#linkForm #mid').val(mid);
-        $('#linkForm #title').val(title);
-        $('#linkForm #url').val(url);
-        $('#linkForm #logo').val(logo);
-        $('#linkForm #sort').val(sort);
     }
 
-    function delLink(mid) {
+    function delLink(aid) {
         tale.alertConfirm({
-            title:'确定删除该链接吗?',
+            title: '确定删除该内容吗?',
             then: function () {
                 tale.post({
-                    url : '/admin/links/delete',
-                    data: {mid: mid},
+                    url: '/admin/about',
+                    data: {_method: "delete", aid: aid},
                     success: function (result) {
-                        if(result && result.success){
-                            tale.alertOkAndReload('链接删除成功');
+                        if (result && result.success) {
+                            tale.alertOkAndReload('删除成功');
                         } else {
-                            tale.alertError(result.msg || '链接删除失败');
+                            tale.alertError(result.msg || '删除失败');
                         }
                     }
                 });
             }
         });
     }
+
     /*]]>*/
 </script>
 </body>

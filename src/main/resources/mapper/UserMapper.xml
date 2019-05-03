@@ -13,6 +13,32 @@
     <result column="logged" jdbcType="INTEGER" property="logged" />
     <result column="group_name" jdbcType="VARCHAR" property="groupName" />
   </resultMap>
+  <select id="selectLastLogin" resultType="long">
+    SELECT lastLogin
+    FROM t_users
+  </select>
+  <select id="selectActivated" resultType="integer">
+    SELECT activated
+    FROM t_users
+  </select>
+  <select id="selectErrorNum" resultType="integer">
+    SELECT errors
+    FROM t_users
+  </select>
+  <update id="updateErrorsAddOne">
+    UPDATE t_users
+    set errors=errors+1
+  </update>
+  <update id="updatelastLoginErrorsActivated">
+    UPDATE t_users
+    SET lastLogin=#{lastLogin},errors=#{errors},activated=#{activated}
+
+  </update>
+  <select id="selectByUsernameAndPassword" resultType="integer">
+    SELECT * FROM t_users
+    WHERE username=#{username}
+    AND password=#{password}
+  </select>
   <sql id="Example_Where_Clause">
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -279,13 +305,14 @@
     update t_users
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      email = #{email,jdbcType=VARCHAR},
       home_url = #{homeUrl,jdbcType=VARCHAR},
-      screen_name = #{screenName,jdbcType=VARCHAR},
       created = #{created,jdbcType=INTEGER},
-      activated = #{activated,jdbcType=INTEGER},
-      logged = #{logged,jdbcType=INTEGER},
-      group_name = #{groupName,jdbcType=VARCHAR}
+      activated = #{activated,jdbcType=INTEGER}
     where uid = #{uid,jdbcType=INTEGER}
+  </update>
+  <update id="updatePasswordByname">
+    UPDATE t_users
+    set password = #{password}
+    WHERE username = #{username}
   </update>
 </mapper>

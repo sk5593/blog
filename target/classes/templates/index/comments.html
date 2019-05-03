@@ -1,22 +1,32 @@
-
 <html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="comments">
 <script type="text/javascript">
-
-           KindEditor.ready(function (K) {
-               window.editor = K.create('#textarea', {
-                   items: [
-                       'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
-                       'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
-                       'insertunorderedlist', 'i', 'emoticons', 'link'
-                   ],
-                   //不可以拖动
-                   resizeType:0
-               })
-           })
-
-
-
-
+    KindEditor.ready(function (K) {
+        window.editor = K.create('#mytextarea', {
+            items: [
+                'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
+                'insertunorderedlist', 'i', 'emoticons', 'link'
+            ],
+            //不可以拖动
+            resizeType: 0,
+            minHeight: 50,
+            //设置字体大小
+            cssData: 'body {font-size:14px;}',
+            //数据同步
+            afterBlur: function () {
+                this.sync();
+            },
+            //创建时初始化
+            afterCreate: function () {
+                K.html("#mytextarea", "想对作者说点什么...")
+            },
+            //聚焦时清空初始化
+            afterFocus: function () {
+                if (editor.html() == "想对作者说点什么...")
+                    K.html("#mytextarea", "")
+            }
+        })
+    })
 </script>
 <body>
 <div th:if="${article}!=null">
@@ -30,68 +40,113 @@
                     如果你想 <a href="/logout" title="注销" data-no-instant="">注销</a> ?
                 </th:block>
             </span>
-                <form method="post" id="comment-form"  role="form"
-                      th:action="@{/comments}" >
+                <form method="post" id="comment-form" role="form"
+                      th:action="@{/comments}">
                     <input type="hidden" name="coid" id="coid"/>
                     <input type="hidden" name="cid" id="cid" th:value="${article.cid}"/>
                     <input type="hidden" name="_csrf_token" th:value="${_csrf_token}"/>
                     <input type="text" name="author" maxlength="12" id="author"
                            class="form-control input-control clearfix"
-                           placeholder="姓名 (*)"
+                           placeholder="姓名 (可选)"
                     />
                     <input type="email" name="mail" id="mail" class="form-control input-control clearfix"
-                           placeholder="邮箱 (*)"
+                           placeholder="邮箱 (可选)"
                     />
-
-                    <textarea  name="textarea" id="textarea" style="width:600px;height:250px;"></textarea>
-                    <button type="submit" id="misubmit" >提交</button>
+                    <textarea name="mytextarea" style="width:600px;height:250px; " id="mytextarea"></textarea>
+                    <button type="submit" id="misubmit">提交</button>
                 </form>
             </div>
             <div th:unless="${article.allowComment}">
                 <span class="response">评论已关闭.</span>
             </div>
+                <ol class="comment-list" id="comment_list">
 
-            <div th:if="${comments}">
-                <ol class="comment-list">
-                    <th:block th:each="comment :${comments.list}">
-                        <li th:id="'li-comment-'+${comment.coid}" class="comment-body comment-parent comment-odd">
-                            <div th:id="'comment-'+${comment.coid}">
-                                <div class="comment-view" onclick="">
-                                    <div class="comment-header">
-                                        <!--设置get请求的参数-->
-                                        <img class="avatar"
-                                             th:src="@{${commons.gravatar(comment.mail)}(s='80',r='G',d='')}"
-                                             th:title="${comment.author}"
-                                             width="80" height="80"/>
-                                        <span class="comment-author">
-                                <a href="##" rel="external nofollow"
-                                   th:text="${comment.author}"></a>
-                                </span>
-                                    </div>
-                                    <div class="comment-content" >
-                                        <span class="comment-author-at" ></span>
-                                        <p th:utext="${comment.content}"></p>
-                                    </div>
-                                    <div class="comment-meta">
-                                        <time class="comment-time"  th:text="${#dates.format(comment.created, 'yyyy-MM-dd HH:mm:ss')}"></time>
-                                        <span class="comment-reply">
-                            </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </th:block>
                 </ol>
                 <!--第一个div可以让当前页高亮-->
                 <div class="lists-navigator clearfix">
-                <div th:replace="comm/macros::pageNav(${comments},'«上一页','下一页»','comments')"></div>
-                </div>
 
+            <div class="sk2">
+                <ol class="pagination">
+                    <block id="block">
+                        <!--页标-->
+                    </block>
+                </ol>
             </div>
+        </div>
+
         </div>
     </div>
 </div>
 </body>
+<script >
+    $(function () {
+        $("#misubmit").click(function () {
+            var d = $("#mytextarea").val();
+            if (d == "" || d == undefined) {
+                alert("评论不能为空！")
+                return false;
+            }
+        })
+    })
 
-<!--<div th:replace="comm/tale_comment::tale_comment"></div>-->
+    window.onload = function (ev) {
+        $.ajax({
+            url: "/comments/1",
+            success: function (result) {
+                $(".sk2").pagination({
+                    items: result.pages,
+                    itemsOnPage: 1,
+                    cssStyle: 'light-theme',
+                    onPageClick: nextPage,
+                    prevText:"上一页",
+                    nextText:"下一页"
+                });
+                nextPage(1)
+            }
+
+        })
+    }
+
+    function nextPage(index) {
+
+        $.ajax({
+            url: "/comments/" + index,
+            success: function (result) {
+
+                data = "";
+                $.each(result.list, function (k, v) {
+                    data += "<li  class=\"comment-body comment-parent comment-odd\">\n" +
+                        "                            <div th:id=\"'comment-'+${comment.coid}\">\n" +
+                        "                                <div class=\"comment-view\" >\n" +
+                        "                                    <div class=\"comment-header\">\n" +
+                        "                                        <!--设置get请求的参数-->\n" +
+                        "\n" +
+                        "                                        <span class=\"comment-author\">\n" +
+                        "                                <a href=\"##\" rel=\"external nofollow\"\n" +
+                        "                                    id=\"writer\">" + v.author + "</a>\n" +
+                        "                                </span>\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"comment-content\" >\n" +
+                        "                                        <span class=\"comment-author-at\" ></span>\n" +
+                        "                                        <p  id=\"content\">" + v.content + "</p>\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"comment-meta\">\n" +
+                        "                                        <time class=\"comment-time\" >" + v.stringCreated + "</time>\n" +
+                        "                                        <span class=\"comment-reply\">\n" +
+                        "                            </span>\n" +
+                        "                                    </div>\n" +
+                        "                                </div>\n" +
+                        "                            </div>\n" +
+                        "                        </li>"
+                    $("#comment_list").html(data)
+                })
+
+
+            }
+        })
+
+    }
+
+
+</script>
 </html>

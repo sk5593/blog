@@ -7,19 +7,13 @@ public class User {
 
     private String password;
 
-    private String email;
+    private Long lastLogin;
+
+    private Integer errors;
 
     private String homeUrl;
 
-    private String screenName;
-
-    private Integer created;
-
-    private Integer activated;
-
-    private Integer logged;
-
-    private String groupName;
+    private Boolean activated;
 
     public Integer getUid() {
         return uid;
@@ -45,13 +39,7 @@ public class User {
         this.password = password == null ? null : password.trim();
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
 
     public String getHomeUrl() {
         return homeUrl;
@@ -61,43 +49,29 @@ public class User {
         this.homeUrl = homeUrl == null ? null : homeUrl.trim();
     }
 
-    public String getScreenName() {
-        return screenName;
-    }
 
-    public void setScreenName(String screenName) {
-        this.screenName = screenName == null ? null : screenName.trim();
-    }
-
-    public Integer getCreated() {
-        return created;
-    }
-
-    public void setCreated(Integer created) {
-        this.created = created;
-    }
-
-    public Integer getActivated() {
+    public Boolean getActivated() {
         return activated;
     }
 
-    public void setActivated(Integer activated) {
+    public void setActivated(Boolean activated) {
         this.activated = activated;
     }
 
-    public Integer getLogged() {
-        return logged;
+
+    public Long getLastLogin() {
+        return lastLogin;
     }
 
-    public void setLogged(Integer logged) {
-        this.logged = logged;
+    public void setLastLogin(Long lastLogin) {
+        this.lastLogin = lastLogin;
     }
 
-    public String getGroupName() {
-        return groupName;
+    public Integer getErrors() {
+        return errors;
     }
 
-    public void setGroupName(String groupName) {
-        this.groupName = groupName == null ? null : groupName.trim();
+    public void setErrors(Integer errors) {
+        this.errors = errors;
     }
 }

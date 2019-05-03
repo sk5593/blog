@@ -15,7 +15,12 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
-
+.contain{
+    width : 100%;
+    min-width: 810px;
+    height: 100%;
+    min-height: 600px;
+}
 html {
     overflow-x: hidden;
     -ms-text-size-adjust: 100%;
@@ -197,7 +202,7 @@ table th {
 }
 
 table td, table th {
-    padding: 6px 13px;
+    padding: 6px 11.5px;
     border: 1px solid #ddd
 }
 
@@ -282,7 +287,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 
 .bg-grey {
-    background-color: #f7f7f7 !important
+    background-color: #f7f7f7 !important;
+
 }
 
 .bg-deepgrey {
@@ -437,20 +443,20 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     background-position: 0 -360px !important
 }
 
-.header {
-    line-height: 78px;
-    /*background-image: url("/user/img/rand/25.jpg");*/
-    position: fixed;
-    z-index: 10;
-    display: block;
-    width: 100%;
-    height: 80px;
-    padding: 0;
-    text-align: right;
-    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, .1)
-}
+/*.header {*/
+    /*line-height: 78px;*/
+    /*!*background-image: url("/user/img/rand/25.jpg");*!*/
+    /*position: fixed;*/
+    /*z-index: 10;*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*height: 80px;*/
+    /*padding: 0;*/
+    /*text-align: right;*/
+    /*-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);*/
+    /*-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, .1);*/
+    /*box-shadow: 0 1px 5px rgba(0, 0, 0, .1)*/
+/*}*/
 
 .navbar-container {
     position: relative;
@@ -669,23 +675,35 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .post-lists {
     position: relative;
-
-
-
+    width: 900px;
+    height: 1230px;
     display: block;
     overflow: hidden
 }
-
+.post-lists-archives{
+    position: relative;
+    display: block;
+    overflow: hidden
+}
+.categorys-item {
+    position: relative;
+    min-width: 900px;
+    min-height: 1230px;
+    display: block;
+    overflow: hidden
+}
 .post-lists-body {
     display: block
 }
 
 .post-list-item {
     float: left;
-    width: 33.3333%;
+    width: 33.333%;
     height: auto;
     padding: 15px;
-    align-items: center
+    align-items: center;
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
+
 }
 
 .post-list-item-container {
@@ -693,6 +711,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     overflow: hidden;
     width: 100%;
     padding: 0;
+    cursor:pointer;
     border-radius: 3px;
     background-color: #fff;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
@@ -764,7 +783,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     position: relative;
     height: 130px;
     padding: 15px 20px 15px;
-    background-color: #fff
+    background-color: #fff;
+
 }
 
 .post-list-item-container .item-label .item-title a {
@@ -1069,15 +1089,17 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .archive-page .post-list-item-container {
     border: 1px solid rgba(184, 197, 214, .2);
     border-radius: 3px;
-    background: #fff;
+
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .04)
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
 }
 
 .archive-page .post-list-item-container .item-label {
     height: 95px;
     width: 270px;
-    background: #fff
+    background: #fff;
+
 }
 
 .archive-page .post-list-item-container .item-label .item-title a {
@@ -1391,7 +1413,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     line-height: 45px;
     display: inline-block;
     float: left;
-    margin: 0 20px
+
 }
 
 .comment-header .comment-by-author a {
@@ -1505,7 +1527,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
     z-index: 1;
     margin-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 15px;
     background-color: #fff
 }
 
@@ -1584,7 +1606,21 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     text-overflow: ellipsis;
     color: #767676
 }
-
+#misubmit{
+    width: 130px; /* 宽度 */
+    height: 30px; /* 高度 */
+    border-width: 0px; /* 边框宽度 */
+    border-radius: 3px; /* 边框半径 */
+    background: #1E90FF; /* 背景颜色 */
+    cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+    outline: none; /* 不显示轮廓线 */
+    font-family: Microsoft YaHei; /* 设置字体 */
+    color: white; /* 字体颜色 */
+    font-size: 15px; /* 字体大小 */
+}
+#misubmit:hover{
+    background: #5c5c5c;
+}
 .footer-meta .meta-posts li a {
     color: #5f5f5f
 }

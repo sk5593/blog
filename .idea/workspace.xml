@@ -2,110 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="821bef5c-0302-417d-a6a6-2008e818fc72" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/AboutMe.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/AdminIndexMessages.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Archives.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Categories.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/IndexMessages.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/MessagesBoard.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/bean/Visitors.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyExceptionHandler.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/config/MyInterceptor.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/AboutController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/ArchivesController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/CategoryController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminAboutController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminArticleController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminCategoryController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminCommentController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminIndexController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminMessagesBoardController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/AdminUserController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/admin/LoginController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/AboutMeMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/dao/VisitorsMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/AboutService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/ArchivesService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/CategoryService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/AdminUserService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/CommentService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/service/admin/LoginService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Result.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AboutMeMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/VisitorsMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/1.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/2.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/aboutme/3.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/images/quickstart.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/admin/js/jquery.simplePagination.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/admin.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.flat.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.flat.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/amazeui.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/css/app.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/app-icon72x72@2x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-chrome.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-firefox.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-ie.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-opera.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/admin-safari.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/adminPage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/blogPage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landing.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/landingPage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/loginPage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/examples/sidebarPage.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/favicon.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/i/startup-640x1096.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.ie8polyfill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.ie8polyfill.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.widgets.helper.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/amazeui.widgets.helper.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/app.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/handlebars.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/assets/js/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/codingLife/canvas-nest.min.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/FontAwesome.otf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/all.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/all.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/amazeui.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/amazeui.min.js.下载" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/dog.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/font-awesome.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/index.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/plugs_paging.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/index/simplePagination.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/user/img/rand/25.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/user/img/rand/99.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/messagesBoard_list.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/footer2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/header2.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/test.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/controller/IndexController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" afterPath="$PROJECT_DIR$/src/main/java/com/sk/blog/utils/Commons.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/index/index.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="$PROJECT_DIR$/target/classes/application.properties" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/IndexController.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/controller/IndexController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Commons.class" afterPath="$PROJECT_DIR$/target/classes/com/sk/blog/utils/Commons.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index/index.html" afterPath="$PROJECT_DIR$/target/classes/templates/index/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -333,50 +230,6 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="sk" type="462c0819:PsiDirectoryNode" />
               <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="sk" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -628,7 +481,7 @@
       <workItem from="1556796293934" duration="3743000" />
       <workItem from="1556844561572" duration="4369000" />
       <workItem from="1556851373593" duration="3082000" />
-      <workItem from="1556861717715" duration="599000" />
+      <workItem from="1556861717715" duration="1059000" />
     </task>
     <task id="LOCAL-00001" summary="文章归档，文章分类">
       <created>1555325796890</created>
@@ -644,7 +497,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556850688347</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2019/5/3">
+      <created>1556862481823</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1556862481823</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -659,7 +519,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360071000" />
+    <option name="totallyTimeSpent" value="360531000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,6 +646,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-778">
           <caret line="42" column="16" lean-forward="false" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -850,6 +711,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="68" column="39" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -878,6 +740,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2838">
           <caret line="99" column="24" lean-forward="false" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,6 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
           <caret line="26" column="16" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -914,6 +778,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-521">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -921,6 +786,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -928,6 +794,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-983">
           <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -935,6 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2970">
           <caret line="104" column="16" lean-forward="true" selection-start-line="104" selection-start-column="16" selection-end-line="104" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -942,6 +810,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-620">
           <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -949,6 +818,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2145">
           <caret line="83" column="28" lean-forward="false" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -956,6 +826,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="35" />
+          <folding>
+            <marker date="1556845266978" expanded="true" signature="244:296" ph="DELETE FROM t_messagesboard... " />
+            <marker date="1556845266978" expanded="true" signature="383:484" ph="SELECT count... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="590:675" ph="SELECT * FRO... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="777:844" ph="SELECT * FRO... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="928:972" ph="SELECT count... t_messagesboard" />
+            <marker date="1556845266978" expanded="true" signature="1033:1154" ph="INSERT INTO t_messagesboard... " />
+            <marker date="1556845266978" expanded="true" signature="1245:1327" ph="SELECT aid,a... t_about" />
+            <marker date="1556845266978" expanded="true" signature="1375:1480" ph="INSERT INTO t_about... " />
+            <marker date="1556845266978" expanded="true" signature="1528:1574" ph="DELETE FROM t_about... " />
+            <marker date="1556845266978" expanded="true" signature="1622:1721" ph="UPDATE t_about... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -963,6 +845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -970,6 +853,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -984,6 +870,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1089">
           <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -991,6 +878,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
           <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1006,6 +894,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
           <caret line="56" column="73" lean-forward="false" selection-start-line="56" selection-start-column="73" selection-end-line="56" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -228,8 +228,10 @@ public final class Commons {
     public static String article(String value) {
         if (StringUtils.isNotBlank(value)) {
             value = value.replace("<!--more-->", "\r\n");
+
             return TaleUtils.mdToHtml(value);
         }
+
         return "";
     }
 

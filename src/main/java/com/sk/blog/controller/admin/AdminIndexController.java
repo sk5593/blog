@@ -1,22 +1,20 @@
 package com.sk.blog.controller.admin;
 
 import com.github.pagehelper.PageInfo;
-import com.sk.blog.bean.AdminIndexMessages;
-import com.sk.blog.bean.Categories;
-import com.sk.blog.bean.Contents;
-import com.sk.blog.bean.MessagesBoard;
+import com.sk.blog.bean.*;
 import com.sk.blog.dao.AboutMeMapper;
 import com.sk.blog.dao.ContentsMapper;
+import com.sk.blog.dao.LogsMapper;
 import com.sk.blog.service.AboutService;
 import com.sk.blog.service.ArticleService;
 import com.sk.blog.service.CategoryService;
 import com.sk.blog.utils.Commons;
+import com.sk.blog.utils.Result;
+import com.sk.blog.utils.TaleUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,6 +29,9 @@ public class AdminIndexController {
     ContentsMapper contentsMapper;
     @Autowired
     AboutService aboutService;
+    @Autowired
+    LogsMapper logsMapper;
+
 
     @RequestMapping( "admin/index" )
     /**
@@ -87,5 +88,17 @@ public class AdminIndexController {
         model.addAttribute("messages",messagesBoard);
         model.addAttribute("commons",commons);
         return "admin/messagesBoard_list";
+    }
+    @ResponseBody
+    @PostMapping("/admin/index")
+    public List<Logs> adminIndex()
+    {
+
+        List<Logs> logs = logsMapper.selectByExample(null);
+        for (Logs l:logs
+             ) {
+           l.setStringCreated(TaleUtils.formatDate(l.getCreated()));
+        }
+        return logs;
     }
 }

@@ -5,8 +5,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * map缓存实现
- * <p>
- *
  */
 public class MapCache {
 
@@ -39,20 +37,17 @@ public class MapCache {
      *
      * @param key 缓存key
      * @param <T>
-     * @return
+     * @return 如果没有过期则返回，过期了则删除
      */
     public <T> T get(String key) {
         CacheObject cacheObject = cachePool.get(key);
         if (null != cacheObject) {
             long cur = System.currentTimeMillis() / 1000;
-            //未过期直接返回
             if (cacheObject.getExpired() <= 0 || cacheObject.getExpired() > cur) {
                 Object result = cacheObject.getValue();
                 return (T) result;
-            }
-            //已过期直接删除
-            if (cur > cacheObject.getExpired()) {
-                cachePool.remove(key);
+            }else{
+                del(key);
             }
         }
         return null;
@@ -90,10 +85,6 @@ public class MapCache {
      */
     public void set(String key, Object value, long expired) {
         expired = expired > 0 ? System.currentTimeMillis() / 1000 + expired : expired;
-        //cachePool大于800时，强制清空缓存池，这个操作有些粗暴会导致误删问题，后期考虑用redis替代MapCache优化
-        if (cachePool.size() > 800) {
-            cachePool.clear();
-        }
         CacheObject cacheObject = new CacheObject(key, value, expired);
         cachePool.put(key, cacheObject);
     }
@@ -149,6 +140,11 @@ public class MapCache {
      */
     public void clean() {
         cachePool.clear();
+    }
+
+    public Integer size()
+    {
+        return cachePool.size();
     }
 
     static class CacheObject {

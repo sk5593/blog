@@ -41,7 +41,7 @@
                 </th:block>
             </span>
                 <form method="post" id="comment-form" role="form"
-                      th:action="@{/comments}">
+                      >
                     <input type="hidden" name="coid" id="coid"/>
                     <input type="hidden" name="cid" id="cid" th:value="${article.cid}"/>
                     <input type="hidden" name="_csrf_token" th:value="${_csrf_token}"/>
@@ -53,25 +53,28 @@
                            placeholder="邮箱 (可选)"
                     />
                     <textarea name="mytextarea" style="width:600px;height:250px; " id="mytextarea"></textarea>
-                    <button type="submit" id="misubmit">提交</button>
+                    <button type="button" id="misubmit">提交</button>
                 </form>
             </div>
             <div th:unless="${article.allowComment}">
                 <span class="response">评论已关闭.</span>
             </div>
-                <ol class="comment-list" id="comment_list">
+            <ol class="comment-list" id="comment_list">
+            </ol>
+            <div class="lists-navigator clearfix">
 
-                </ol>
-                <!--第一个div可以让当前页高亮-->
-                <div class="lists-navigator clearfix">
+                <div class="sk2">
+                    <ol class="pagination">
 
-            <div class="sk2">
-                <ol class="pagination">
-                    <block id="block">
-                        <!--页标-->
-                    </block>
-                </ol>
+                        <block id="block">
+                            <!--页标-->
+                        </block>
+
+
+                    </ol>
+                </div>
             </div>
+        </div>
         </div>
 
         </div>
@@ -86,6 +89,28 @@
                 alert("评论不能为空！")
                 return false;
             }
+
+            var form = $("#comment-form").serialize()
+            $.ajax({
+                url: "/comments",
+                type: "post",
+                data: form,
+                dataType: "json",
+                success: function (result) {
+
+                    if (result && result.success) {
+                        alert("评论成功")
+
+                        //清空textarea
+                        editor.html("");
+                        //刷新显示刚刚的留言内容
+                        nextPage(1)
+                    } else {
+                        alert(result.msg)
+                    }
+                }
+
+            })
         })
     })
 

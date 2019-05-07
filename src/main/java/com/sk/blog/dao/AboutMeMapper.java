@@ -25,4 +25,5 @@ public interface AboutMeMapper {
     List<MessagesBoard> getLastMessagesBoard();
     //查询十分钟之内某个ip 的留言数
     Integer getCountByLimitTenMinute(@Param("created") Long created,@Param("ip") String ip);
+    Integer getCountByLimitTenMinuteFromComments(@Param("created") Long created,@Param("ip") String ip);
 }

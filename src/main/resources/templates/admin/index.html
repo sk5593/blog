@@ -51,64 +51,65 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">最新文章</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <ul class="list-group">
-                                        <li class="list-group-item" th:each="article : ${articles}">
-                            <span class="badge badge-primary"
-                                  th:title="${article.commentsNum}+'条评论'" th:text="${article.commentsNum}"></span>
-                                            <a target="_blank" th:href="${commons.site_url('/article/')}+${article.cid}"
-                                               th:text="${article.title}"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h4 class="panel-title">最新留言</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <div th:if="${comments}== null and ${#lists.size(comments)}==0">
-                                        <div class="alert alert-warning">
-                                            还没有收到留言.
-                                        </div>
-                                    </div>
-                                    <ul class="list-group"
-                                        th:unless="${comments}==null and ${#lists.size(comments)}==0">
-                                        <li class="list-group-item" th:each="comment : ${comments}">
-                                            <div th:if="${comment.ip}!=null and ${comment.ip}!=''">
-                                                <span
-                                                        th:text="${comment.author}"></span>
-                                            </div>
-                                            <th:block th:unless="${comment.ip}!=null and ${comment.ip}!=''" th:text="${comment.author}"/>
-                                            于<th:block th:text="${#dates.format(comment.created,'MM月dd日HH:mm')}"/>：<a
-                                                th:href="${commons.site_url('/article/')}+${comment.mid}+'#comments'"
-                                                target="_blank" th:utext="${commons.article(comment.content)}"></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
                         <!--<div class="col-md-4">-->
                             <!--<div class="panel panel-default">-->
                                 <!--<div class="panel-heading">-->
-                                    <!--<h4 class="panel-title">系统日志</h4>-->
+                                    <!--<h4 class="panel-title">最新文章</h4>-->
                                 <!--</div>-->
                                 <!--<div class="panel-body">-->
-                                    <!--<ul class="list-group" >-->
-                                        <!--<li class="list-group-item" th:each="log : ${logs}">-->
-                                            <!--<span th:text="${commons.fmtdate(log.created, 'yyyy-MM-dd HH:mm:ss')} +' => '+ ${log.action}"></span>-->
+                                    <!--<ul class="list-group">-->
+                                        <!--<li class="list-group-item" th:each="article : ${articles}">-->
+                            <!--<span class="badge badge-primary"-->
+                                  <!--th:title="${article.commentsNum}+'条评论'" th:text="${article.commentsNum}"></span>-->
+                                            <!--<a target="_blank" th:href="${commons.site_url('/article/')}+${article.cid}"-->
+                                               <!--th:text="${article.title}"></a>-->
                                         <!--</li>-->
                                     <!--</ul>-->
                                 <!--</div>-->
                             <!--</div>-->
                         <!--</div>-->
+                        <!--<div class="col-md-4">-->
+                            <!--<div class="panel panel-default">-->
+                                <!--<div class="panel-heading">-->
+                                    <!--<h4 class="panel-title">最新留言</h4>-->
+                                <!--</div>-->
+                                <!--<div class="panel-body">-->
+                                    <!--<div th:if="${comments}== null and ${#lists.size(comments)}==0">-->
+                                        <!--<div class="alert alert-warning">-->
+                                            <!--还没有收到留言.-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<ul class="list-group"-->
+                                        <!--th:unless="${comments}==null and ${#lists.size(comments)}==0">-->
+                                        <!--<li class="list-group-item" th:each="comment : ${comments}">-->
+                                            <!--<div th:if="${comment.ip}!=null and ${comment.ip}!=''">-->
+                                                <!--<span-->
+                                                        <!--th:text="${comment.author}"></span>-->
+                                            <!--</div>-->
+                                            <!--<th:block th:unless="${comment.ip}!=null and ${comment.ip}!=''" th:text="${comment.author}"/>-->
+                                            <!--于<th:block th:text="${#dates.format(comment.created,'MM月dd日HH:mm')}"/>：<a-->
+                                                <!--th:href="${commons.site_url('/article/')}+${comment.mid}+'#comments'"-->
+                                                <!--target="_blank" th:utext="${commons.article(comment.content)}"></a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div >
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">系统日志</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <ul class="list-group" id="logs">
+                                        <li class="list-group-item" >
+                                            <span ></span>
+                                            <span ></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div th:replace="admin/footer :: footer-content"></div>
@@ -118,4 +119,24 @@
 </div>
 <div th:replace="admin/footer :: footer"></div>
 </body>
+<script>
+    $(function () {
+        $.ajax({
+            url:"",
+            type:"post",
+            success:function (result) {
+
+                data=""
+                $.each(result,function (k,v) {
+                   data+="      <li class=\"list-group-item\" >\n" +
+                       "                                            <span >"+v.stringCreated+"</span>\n" +
+                       "                                            <span >"+v.data+"</span>\n" +
+                       "                                        </li>"
+                })
+                $("#logs").html(data)
+
+            }
+        })
+    })
+</script>
 </html>

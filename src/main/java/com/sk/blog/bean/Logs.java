@@ -3,15 +3,25 @@ package com.sk.blog.bean;
 public class Logs {
     private Integer id;
 
-    private String action;
 
     private String data;
 
-    private Integer authorId;
+    private Long created;
 
-    private String ip;
+    private String stringCreated;
 
-    private Integer created;
+    public String getStringCreated() {
+        return stringCreated;
+    }
+
+    public void setStringCreated(String stringCreated) {
+        this.stringCreated = stringCreated;
+    }
+
+    public void setCreated(Long created) {
+
+        this.created = created;
+    }
 
     public Integer getId() {
         return id;
@@ -21,13 +31,6 @@ public class Logs {
         this.id = id;
     }
 
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action == null ? null : action.trim();
-    }
 
     public String getData() {
         return data;
@@ -37,27 +40,7 @@ public class Logs {
         this.data = data == null ? null : data.trim();
     }
 
-    public Integer getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(Integer authorId) {
-        this.authorId = authorId;
-    }
-
-    public String getIp() {
-        return ip;
-    }
-
-    public void setIp(String ip) {
-        this.ip = ip == null ? null : ip.trim();
-    }
-
-    public Integer getCreated() {
+    public Long getCreated() {
         return created;
-    }
-
-    public void setCreated(Integer created) {
-        this.created = created;
     }
 }

@@ -9,12 +9,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="no-siteapp" http-equiv="Cache-Control">
     <link href="/aboutme/aboutmetimeline.css" rel="stylesheet" type="text/css">
-    <link href="/aboutme/amazeui.min.css" rel="stylesheet">
     <link href="/aboutme/all.css" rel="stylesheet">
     <link href="/aboutme/comment.css" rel="stylesheet">
     <link href="/aboutme/aboutme.css" rel="stylesheet">
     <script src="/aboutme/underscore-min.js.下载"></script>
-    <script src="/aboutme/amazeui.min.js.下载"></script>
     <div th:replace="index/header2::header2('关于我',null)"></div>
 </head>
 <!--<div th:replace="index/sidebar::sidebar" class="sidebar"></div>-->
@@ -84,114 +82,113 @@
                         </div>
                         <p><i class="fa fa-quote-right fa-lg" style="float: right"></i></p><br>
                     </div>
+                    <div class="zhy-life">
+                        <div style="text-align: right;margin: 30px auto">
+                        </div>
+                        <div class="zhy-life-title">
+                            <span>心情</span>
+                        </div>
+                        <div class="zhy-you">
+                            <img class="enlargePicture am-img-thumbnail"
+                                 data-src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/you.png"
+                                 src="./aboutme/2.jpg" lg-event-uid="&amp;5">
+                        </div>
+                        <p></p>
+                        <div class="content" th:if="${about.aname} == 'mood'" th:each="about:${allAbouts}">
+                            <article>
+                                <!--年份使用淡出动画，内容使用左侧滑入效果-->
+                                <h3 data-am-scrollspy="{animation: &#39;scale-up&#39;}"></h3>
+                                <section data-am-scrollspy="{animation: &#39;slide-left&#39;}">
+                                    <span class="point-time point-red"></span>
+                                    <time datetime="2018-12">
+                                        <span th:text="${#dates.format(about.acreated,'yyyy-MM-dd')}"></span>
+                                    </time>
+                                    <aside>
+                                        <p class="things" th:text="${about.atitle}"></p>
+                                        <p class="brief"><span class="text-blue" th:utext="${about.atext}">
+                                            </span></p>
+                                    </aside>
+                                </section>
+
+                            </article>
+
+                        </div>
+                        <!--留言功能-->
+                        <div class="comment">
+                        <div class="comment-top">
+
+                        <form method="post" id="comment-form" role="form">
+                        <input type="hidden" name="mid" id="mid"/>
+                        <input type="text" name="author" maxlength="12" id="author"
+                        class="form-control input-control clearfix"
+                        placeholder="姓名 (可选)"
+                        />
+                        <input type="email" name="mail" id="mail" class="form-control input-control clearfix"
+                        placeholder="邮箱 (可选)"
+                        />
+                        <textarea name="mytextarea" style="width:600px;height:250px; "
+                        id="mytextarea"></textarea>
+                        <button type="button" id="misubmit">提交</button>
+                        </form>
+                        </div>
+
+                        <!--页面留言-->
+                        <ol class="comment-list" id="comment_list">
+                        </ol>
+                        <div class="lists-navigator clearfix">
+
+                        <div class="sk2">
+                        <ol class="pagination">
+
+                        <block id="block">
+                        <!--页标-->
+                        </block>
+
+
+                        </ol>
+                        </div>
+                        </div>
+                        </div>
+                        <!--PC和WAP自适应版-->
+                        <!--<div id="SOHUCS" sid="messagesBoard"></div>-->
+                        <!--<script type="text/javascript">-->
+                        <!--(function () {-->
+                            <!--var appid = 'cyudiDbnb';-->
+                            <!--var conf = 'prod_72c6d70dbd710e65c1a0752fe90d1850';-->
+                            <!--var width = window.innerWidth || document.documentElement.clientWidth;-->
+                            <!--if (width < 960) {-->
+                                <!--window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');-->
+                            <!--} else {-->
+                                <!--var loadJs = function (d, a) {-->
+                                    <!--var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;-->
+                                    <!--var b = document.createElement("script");-->
+                                    <!--b.setAttribute("type", "text/javascript");-->
+                                    <!--b.setAttribute("charset", "UTF-8");-->
+                                    <!--b.setAttribute("src", d);-->
+                                    <!--if (typeof a === "function") {-->
+                                        <!--if (window.attachEvent) {-->
+                                            <!--b.onreadystatechange = function () {-->
+                                                <!--var e = b.readyState;-->
+                                                <!--if (e === "loaded" || e === "complete") {-->
+                                                    <!--b.onreadystatechange = null;-->
+                                                    <!--a()-->
+                                                <!--}-->
+                                            <!--}-->
+                                        <!--} else {-->
+                                            <!--b.onload = a-->
+                                        <!--}-->
+                                    <!--}-->
+                                    <!--c.appendChild(b)-->
+                                <!--};-->
+                                <!--loadJs("http://changyan.sohu.com/upload/changyan.js", function () {-->
+                                    <!--window.changyan.api.config({appid: appid, conf: conf})-->
+                                <!--});-->
+                            <!--}-->
+                        <!--})(); </script>-->
+                    </div>
                 </div>
                 <br><br>
-                <div class="zhy-life">
-                    <div style="text-align: right;margin: 30px auto">
-                        <i class="fa fa-arrows fa-spin"></i>
-                        <i class="fa fa-arrows fa-spin" style="margin-left: 60px"></i><br>
-                    </div>
-                    <div class="zhy-life-title">
-                        <span>心情</span>
-                    </div>
-                    <div class="zhy-you">
-                        <img class="enlargePicture am-img-thumbnail"
-                             data-src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/you.png"
-                             src="./aboutme/2.jpg" lg-event-uid="&amp;5">
-                    </div>
-                    <p></p>
-                    <div class="content" th:if="${about.aname} == 'mood'" th:each="about:${allAbouts}">
-                        <article>
-                            <!--年份使用淡出动画，内容使用左侧滑入效果-->
-                            <h3 data-am-scrollspy="{animation: &#39;scale-up&#39;}"></h3>
-                            <section data-am-scrollspy="{animation: &#39;slide-left&#39;}">
-                                <span class="point-time point-red"></span>
-                                <time datetime="2018-12">
-                                    <span th:text="${#dates.format(about.acreated,'yyyy-MM-dd')}"></span>
-                                </time>
-                                <aside>
-                                    <p class="things" th:text="${about.atitle}"></p>
-                                    <p class="brief"><span class="text-blue" th:utext="${about.atext}">
-                                            </span></p>
-                                </aside>
-                            </section>
 
-                        </article>
-
-                    </div>
-                    <!--留言功能-->
-                    <!--<div class="comment">-->
-                    <!--<div class="comment-top">-->
-
-                    <!--<form method="post" id="comment-form" role="form">-->
-                    <!--<input type="hidden" name="mid" id="mid"/>-->
-                    <!--<input type="text" name="author" maxlength="12" id="author"-->
-                    <!--class="form-control input-control clearfix"-->
-                    <!--placeholder="姓名 (可选)"-->
-                    <!--/>-->
-                    <!--<input type="email" name="mail" id="mail" class="form-control input-control clearfix"-->
-                    <!--placeholder="邮箱 (可选)"-->
-                    <!--/>-->
-                    <!--<textarea name="mytextarea" style="width:600px;height:250px; "-->
-                    <!--id="mytextarea"></textarea>-->
-                    <!--<button type="button" id="misubmit">提交</button>-->
-                    <!--</form>-->
-                    <!--</div>-->
-
-                    <!--&lt;!&ndash;页面留言&ndash;&gt;-->
-                    <!--<ol class="comment-list" id="comment_list">-->
-                    <!--</ol>-->
-                    <!--<div class="lists-navigator clearfix">-->
-
-                    <!--<div class="sk2">-->
-                    <!--<ol class="pagination">-->
-
-                    <!--<block id="block">-->
-                    <!--&lt;!&ndash;页标&ndash;&gt;-->
-                    <!--</block>-->
-
-
-                    <!--</ol>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--</div>-->
-                    <!--PC和WAP自适应版-->
-                    <div id="SOHUCS" sid="messagesBoard"></div>
-                    <script type="text/javascript">
-                        (function () {
-                            var appid = 'cyudiDbnb';
-                            var conf = 'prod_72c6d70dbd710e65c1a0752fe90d1850';
-                            var width = window.innerWidth || document.documentElement.clientWidth;
-                            if (width < 960) {
-                                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
-                            } else {
-                                var loadJs = function (d, a) {
-                                    var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
-                                    var b = document.createElement("script");
-                                    b.setAttribute("type", "text/javascript");
-                                    b.setAttribute("charset", "UTF-8");
-                                    b.setAttribute("src", d);
-                                    if (typeof a === "function") {
-                                        if (window.attachEvent) {
-                                            b.onreadystatechange = function () {
-                                                var e = b.readyState;
-                                                if (e === "loaded" || e === "complete") {
-                                                    b.onreadystatechange = null;
-                                                    a()
-                                                }
-                                            }
-                                        } else {
-                                            b.onload = a
-                                        }
-                                    }
-                                    c.appendChild(b)
-                                };
-                                loadJs("http://changyan.sohu.com/upload/changyan.js", function () {
-                                    window.changyan.api.config({appid: appid, conf: conf})
-                                });
-                            }
-                        })(); </script>
-                </div>
             </div>
 
         </div>
@@ -208,63 +205,63 @@
 
 </body>
 <script>
-//     KindEditor.ready(function (K) {
-//         window.editor = K.create('#mytextarea', {
-//             items: [
-//                 'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
-//                 'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
-//                 'insertunorderedlist', 'i', 'emoticons', 'link'
-//             ],
-// //不可以拖动
-//             resizeType: 0,
-//             minHeight: 50,
-// //设置字体大小
-//             cssData: 'body {font-size:14px;}',
-// //数据同步
-//             afterBlur: function () {
-//                 this.sync();
-//             },
-// //创建时初始化
-//             afterCreate: function () {
-//                 K.html("#mytextarea", "想对作者说点什么...")
-//             },
-// //聚焦时清空初始化
-//             afterFocus: function () {
-//                 if (editor.html() == "想对作者说点什么...")
-//                     K.html("#mytextarea", "")
-//             }
-//         })
-//     })
+    KindEditor.ready(function (K) {
+        window.editor = K.create('#mytextarea', {
+            items: [
+                'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
+                'insertunorderedlist', 'i', 'emoticons', 'link'
+            ],
+//不可以拖动
+            resizeType: 0,
+            minHeight: 50,
+//设置字体大小
+            cssData: 'body {font-size:14px;}',
+//数据同步
+            afterBlur: function () {
+                this.sync();
+            },
+//创建时初始化
+            afterCreate: function () {
+                K.html("#mytextarea", "想对作者说点什么...")
+            },
+//聚焦时清空初始化
+            afterFocus: function () {
+                if (editor.html() == "想对作者说点什么...")
+                    K.html("#mytextarea", "")
+            }
+        })
+    })
 </script>
 
 <script>
-    // $("#misubmit").click(function () {
-    //     var d = $("#mytextarea").val();
-    //     if ($.trim(d) == "" || typeof(d) == "undefined" || d === null) {
-    //         alert("留言不能为空！")
-    //         return false;
-    //     }
-    //     var form = $("#comment-form").serialize()
-    //     $.ajax({
-    //         url: "/messagesBoard",
-    //         type: "post",
-    //         data: form,
-    //         dataType: "json",
-    //         success: function (result) {
-    //
-    //             if (result && result.success) {
-    //                 alert("留言成功")
-    //                 //清空textarea
-    //                 editor.html("");
-    //                 //刷新显示刚刚的留言内容
-    //                 nextPage(1)
-    //             } else {
-    //                 alert(result.msg)
-    //             }
-    //         }
-    //
-    //     })
-    // })
+    $("#misubmit").click(function () {
+        var d = $("#mytextarea").val();
+        if ($.trim(d) == "" || typeof(d) == "undefined" || d === null) {
+            alert("留言不能为空！")
+            return false;
+        }
+        var form = $("#comment-form").serialize()
+        $.ajax({
+            url: "/messagesBoard",
+            type: "post",
+            data: form,
+            dataType: "json",
+            success: function (result) {
+
+                if (result && result.success) {
+                    alert("留言成功")
+                    //清空textarea
+                    editor.html("");
+                    //刷新显示刚刚的留言内容
+                    nextPage(1)
+                } else {
+                    alert(result.msg)
+                }
+            }
+
+        })
+    })
     var page = "";
     window.onload = function load(ev) {
 

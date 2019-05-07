@@ -11,6 +11,12 @@
         WHERE created >#{created}
         and ip = #{ip}
     </select>
+    <select id="getCountByLimitTenMinuteFromComments" resultType="integer">
+        SELECT count(1)
+        FROM t_comments
+        WHERE created >#{created}
+        and ip = #{ip}
+    </select>
     <select id="getLastMessagesBoard" resultType="com.sk.blog.bean.MessagesBoard">
         SELECT *
         FROM t_messagesboard

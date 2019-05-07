@@ -215,6 +215,7 @@ public class TaleUtils {
      * @return
      */
     public static String mdToHtml(String markdown) {
+        String newContent="";
         if (StringUtils.isBlank(markdown)) {
             return "";
         }
@@ -224,6 +225,23 @@ public class TaleUtils {
         HtmlRenderer renderer = HtmlRenderer.builder().extensions(extensions).build();
         String content = renderer.render(document);
         content = Commons.emoji(content);
+
+//        if(content.contains("<h1>"))
+//        {
+//             newContent = content.replaceFirst("<h1>", "<h1 id='"+getRandomNumber(500)+"'>");
+//            newContent = content.replaceFirst("<h1>", "<h1 id='"+getRandomNumber(500)+"'>");
+//        }
+//        if(content.contains("<h2>"))
+//        {
+//              newContent = content.replace("<h2>", "<h2 id='"+getRandomNumber(500)+"'>");
+////            System.out.println(newContent);
+//
+//        }
+//        if(content.contains("<h3>"))
+//        {
+//             newContent = content.replace("<h3>", "<h3 id='"+getRandomNumber(500)+"'>");
+//
+//        }
         return content;
     }
 

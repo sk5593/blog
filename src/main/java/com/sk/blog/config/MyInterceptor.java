@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
  */
 public class MyInterceptor implements HandlerInterceptor
 {
-    private int tag;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 

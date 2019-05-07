@@ -57,22 +57,18 @@ public class AdminArticleController {
      *  获取文章信息
      * @return
      */
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @ResponseBody
     @PostMapping("/admin/article/publish")
     public Result saveArticle(Contents content)
     {
         try {
-
             articleService.insertArticles(content);
-            return Result.ok();
-        }
-        catch (Exception e)
-        {
-            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            return Result.msg("添加文章失败！");
-        }
 
+              return Result.ok();
+        }catch (Exception e){
+              throw e;
+        }
     }
 
     /**

@@ -1,3 +1,5 @@
+
+//输入的文本，工具栏，预览
 function markdown(textarea, toolbar, preview) {
     var options = {};
     options.strings = {

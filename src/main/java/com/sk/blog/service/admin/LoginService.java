@@ -5,6 +5,7 @@ import com.sk.blog.bean.UserExample;
 import com.sk.blog.dao.UserMapper;
 import com.sk.blog.utils.Result;
 import com.sk.blog.utils.TaleUtils;
+import io.lettuce.core.ScriptOutputType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +18,11 @@ public class LoginService {
     @Autowired
     UserMapper userMapper;
 
-    public Result login(String username, String password, HttpSession session) {
+    public synchronized Result login(String username, String password, HttpSession session) {
         String s = TaleUtils.MD5encode(password);
         //账号密码正确并且activated为1，如果账号密码正确，但是activated为0，则计算与上次登录禁用的时间差，
         // 达到半小时则将activate置为0，正确登录
-        Integer s1 = userMapper.selectByUsernameAndPassword(username, password);
+        Integer s1 = userMapper.selectByUsernameAndPassword(username, s);
 
         Integer activated = userMapper.selectActivated();
 

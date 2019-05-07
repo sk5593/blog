@@ -4,7 +4,9 @@ import com.sk.blog.bean.Logs;
 import com.sk.blog.bean.LogsExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
+@Component
 public interface LogsMapper {
     long countByExample(LogsExample example);
 

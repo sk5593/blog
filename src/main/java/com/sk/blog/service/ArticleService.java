@@ -64,11 +64,26 @@ public class ArticleService {
     /**
      * 添加评论
      */
-    public void insertComment(Comments comments) {
-        commentsMapper.insert(comments);
-        //评论数加1
-        Integer cid = comments.getCid();
-        contentsMapper.updateCommennums(cid);
+    public synchronized Result insertComment(Comments comments) {
+
+        String ip = comments.getIp();
+        Long created = comments.getCreated();
+        //十分钟之前
+        Long limitCreated = created - 600000;
+
+        Integer countByLimitTenMinute = aboutMeMapper.getCountByLimitTenMinuteFromComments(limitCreated,ip);
+
+        if (countByLimitTenMinute > 5) {
+            return Result.msg("您操作太频繁啦，请稍后再试");
+        } else {
+            commentsMapper.insert(comments);
+            //评论数加1
+            Integer cid = comments.getCid();
+            contentsMapper.updateCommennums(cid);
+            return Result.ok();
+        }
+
+
     }
 
     /**

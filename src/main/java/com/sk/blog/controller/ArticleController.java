@@ -7,6 +7,7 @@ import com.sk.blog.bean.Contents;
 import com.sk.blog.service.ArticleService;
 import com.sk.blog.utils.Commons;
 import com.sk.blog.utils.IpAddr;
+import com.sk.blog.utils.Result;
 import com.sk.blog.utils.TaleUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,9 +68,7 @@ public class ArticleController {
 
         //获取第一次访问时传入的cid
         Integer cid = (Integer) session.getAttribute("ArticleCid");
-        //再次获取此article
-        Contents article = articleService.getArticle(cid);
-//        model.addAttribute("article", article);
+
         //分页，从url中获取开始的下标
         PageHelper.startPage(p, size);
         //获取分页评论
@@ -91,8 +90,9 @@ public class ArticleController {
      * @param session  文章id
      * @return
      */
+    @ResponseBody
     @PostMapping( "/comments" )
-    public String subComment(Integer cid,String author, String mail, String mytextarea, HttpSession session, HttpServletRequest request) {
+    public Result subComment(Integer cid,String author, String mail, String mytextarea, HttpSession session, HttpServletRequest request) {
         //获取提交人的ip地址
         IpAddr ia = new IpAddr();
         String ip = ia.getIp(request);
@@ -111,12 +111,10 @@ public class ArticleController {
         comments.setContent(mytextarea);
         comments.setCid(cid);
         //还需要让对应文章的评论数+1
-        articleService.insertComment(comments);
-        return "redirect:article/" + cid;
+        Result result = articleService.insertComment(comments);
+        return result;
 
     }
-
-
     @ResponseBody
     @RequestMapping("/checout")
     public String checkout(@RequestParam String data) {

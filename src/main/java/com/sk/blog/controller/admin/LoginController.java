@@ -36,7 +36,7 @@ public class LoginController {
     /**
      * 用户登录
      */
-    public Result  login(String username, String password, @RequestParam(required = false) String remeber_me, HttpSession session)
+    public Result  login(String username, String password, HttpSession session)
     {
         Result result = loginService.login(username, password,session);
         return result;

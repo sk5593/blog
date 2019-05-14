@@ -1,5 +1,6 @@
 package com.sk.blog.controller.admin;
 
+import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.sk.blog.bean.*;
 import com.sk.blog.dao.AboutMeMapper;
@@ -33,7 +34,7 @@ public class AdminIndexController {
     LogsMapper logsMapper;
 
 
-    @RequestMapping( "admin/index" )
+    @RequestMapping( "/admin/index" )
     /**
      * 跳转到主页
      */
@@ -89,16 +90,24 @@ public class AdminIndexController {
         model.addAttribute("commons",commons);
         return "admin/messagesBoard_list";
     }
-    @ResponseBody
-    @PostMapping("/admin/index")
-    public List<Logs> adminIndex()
-    {
 
-        List<Logs> logs = logsMapper.selectByExample(null);
-        for (Logs l:logs
-             ) {
-           l.setStringCreated(TaleUtils.formatDate(l.getCreated()));
+    /**
+     *
+     * @return 后台主页显示日志
+     */
+    @ResponseBody
+    @GetMapping("/admin/index/{p}")
+        public PageInfo<Logs> adminIndex(@PathVariable("p") Integer p)
+        {
+            PageHelper.startPage(p,10);
+            List<Logs> logs = logsMapper.selectByExample(null);
+            for (Logs l:logs
+                    ) {
+                l.setStringCreated(TaleUtils.formatDate(l.getCreated()));
+            }
+            PageInfo pageInfo = new PageInfo(logs);
+            return pageInfo;
+
         }
-        return logs;
-    }
+
 }

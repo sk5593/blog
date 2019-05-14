@@ -3,6 +3,7 @@ package com.sk.blog.controller;
 import com.github.pagehelper.PageInfo;
 import com.sk.blog.bean.Contents;
 import com.sk.blog.bean.IndexMessages;
+import com.sk.blog.bean.Visitor;
 import com.sk.blog.bean.Visitors;
 import com.sk.blog.service.ArticleService;
 import com.sk.blog.service.IndexService;
@@ -47,39 +48,8 @@ public class IndexController {
 
         String ip = IpAddr.getIp(request);
 
-        long time = new Date().getTime();
-        //记录ip和时间
-        indexService.insertVisitorsMessages(ip, time);
-//        if(StringUtils.isEmpty(cookieValue))
-//        {
-//            cookie = new Cookie("ip", ip);
-//            indexService.updateVisitorsNum();
-//            response.addCookie(cookie);
-//        }else if (!cookieValue.equals(ip)) {
-//                cookie = new Cookie("ip", ip);
-//                indexService.updateVisitorsNum();
-//                response.addCookie(cookie);
-//        }
+           indexService.updateVisitorsNum(ip);
 
-        //访客数量加1
-        //查询缓存中是否有该ip,如果没有，则添加，有，则不添加
-
-       Integer s = cache.get(ip);
-       if(s==null)
-       {
-           //如果该ip为空，则添加
-           cache.set(ip,1,3600);
-           indexService.updateVisitorsNum();
-
-       }else {
-           cache.set(ip,s+1);
-       }
-//      if(cache.size()>3)
-//       {
-//           //如果cache中的ip有3个了，更新访客
-//           indexService.updateVisitorsNum(cache.size());
-//
-//       }
         return this.page(1, size, model);
 
     }

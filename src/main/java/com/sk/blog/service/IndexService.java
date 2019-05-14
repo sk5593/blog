@@ -2,28 +2,37 @@ package com.sk.blog.service;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.sk.blog.bean.Contents;
-import com.sk.blog.bean.ContentsExample;
-import com.sk.blog.bean.IndexMessages;
-import com.sk.blog.bean.Visitors;
+import com.sk.blog.bean.*;
 import com.sk.blog.dao.ContentsMapper;
 import com.sk.blog.dao.VisitorsMapper;
+import com.sk.blog.utils.TaleUtils;
+import jdk.nashorn.api.scripting.ScriptUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.data.redis.core.*;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Service
 public class IndexService {
+    private  Integer tag=0;
+
+    List list = new ArrayList();
     @Autowired
     ContentsMapper contentsMapper;
     @Autowired
     VisitorsMapper visitorsMapper;
-
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    ExecutorService pool;
+//    @Autowired
+//    List list;
     /**
      * 分页显示所有文章
      *
@@ -53,16 +62,57 @@ public class IndexService {
     /**
      * 更新访客数量
      */
-    public void updateVisitorsNum() {
-        visitorsMapper.updateVisitorsNum();
+    public void updateVisitorsNum(String ip) {
+
+
+        SetOperations<String, String> op = stringRedisTemplate.opsForSet();
+
+        Long visitors = op.add("visitors", ip);
+
+        //成功为1，失败为0
+
+        pool.execute(() -> {
+            synchronized (this) {
+                if (visitors == 1) {
+                    tag++;
+                    Visitor visitor = new Visitor();
+                    visitor.setIp(ip);
+                    visitor.setTime(new Date().getTime());
+                    list.add(visitor);
+                }
+                if (op.size("visitors") >= 5 && tag >= 5) {
+                    try {
+                        visitorsMapper.updateVisitorsNum(tag);
+                        //批量插入
+                        insertVisitorsMessages(list);
+
+                    } finally {
+                        list.clear();
+                        tag = 0;
+                    }
+                }
+            }
+
+        });
+
     }
 
+
+
     /**
-     * @param ip   访客ip
-     * @param time 访问时间
+     * 定时清空缓存
      */
-    public void insertVisitorsMessages(String ip, Long time) {
-        visitorsMapper.insertVisitorsMessages(ip, time);
+    @Scheduled( cron = "0 0 0 * * ?" )
+//    @Scheduled(fixedRate = 5000)
+    public void scheduled() {
+        Set<String> visitors = stringRedisTemplate.keys("visitors");
+        Long delete = stringRedisTemplate.delete(visitors);
+    }
+    /**
+     *
+     */
+    public void insertVisitorsMessages(List<Visitor> list) {
+        visitorsMapper.insertVisitorsMessages(list);
     }
 
     /**
@@ -85,11 +135,12 @@ public class IndexService {
         Integer contents = contentsMapper.selectCountContents();
         Integer comments = contentsMapper.selectCountComments();
         Long last = contentsMapper.selectLastUpdate();
-        //将时间戳转化为时间
-        Date date = new Date();
-        date.setTime(last);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        String format = simpleDateFormat.format(date);
+        if(last==null)
+        {
+            last=contentsMapper.selectLastCreated();
+        }
+        //        //将时间戳转化为时间
+        String format = TaleUtils.formatDate(last);
         indexMessages.setArticlesNum(contents);
         indexMessages.setLastUpdate(format);
         indexMessages.setCommentsNum(comments);

@@ -48,8 +48,8 @@
                         </div>
                         <!--<div class="clear"></div>-->
                         <!--<div id="connection" style="font-size: 14px">-->
-                            <!--<span style="color: #009688">微信：gangziyaoxingfu</span><br />-->
-                            <!--<span style="color: #009688">QQ：956910931</span><br />-->
+                            <!--<span style="color: #009688">微信：</span><br />-->
+                            <!--<span style="color: #009688">QQ：</span><br />-->
                             <!--<div id="follow">-->
                                 <!--<button class="myCardBtn am-btn am-btn-secondary am-round attention_btn" data-am-offcanvas="{target: '#doc-oc-demo2', effect: 'push'}">扫描二维码关注我</button>-->
                             <!--</div>-->
@@ -123,7 +123,6 @@
                                 th:href="@{/article/}+${article.cid}"
                                 target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a></div>
                         <hr>
-                        <div class="article-tags"><i class="am-icon-tag" th:text="${article.tags}"></i></div>
                     </div>
                 </div>
                 <!-- 分页 -->
@@ -162,17 +161,12 @@
                                 th:href="@{/article/}+${article.cid}"
                                 target="_blank">阅读全文 <i class="am-icon-angle-double-right"></i></a></div>
                         <hr>
-                        <!--<div class="article-tags"><i class="am-icon-tag"><a class="tag"-->
-                                                                           <!--&gt;-->
-                            <!--java基础（一）</a></i><i class="am-icon-tag"><a class="tag"-->
-                                                                     <!--&gt;-->
-                            <!--原创</a></i></div>-->
                     </div>
                 </div>
 
             </div>
             <!-- 主题右部分 -->
-            <div class="am-u-sm-12 am-u-lg-3">
+            <div class="am-u-sm-12 am-u-lg-3 am-hide-md-down">
                 <div id="right">
                     <!-- 公告 -->
                     <h3 class="widget-title"></h3>

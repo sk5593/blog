@@ -9,6 +9,7 @@
 <script src="/codingLife/canvas-nest.min.js.下载"></script>
 <canvas id="c_n4" width="1037" height="920"
         style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<!--标题-->
 <div class="am-u-sm-12 am-u-lg-2 am-hide-md-down">
     <div class="toc">
 
@@ -21,10 +22,26 @@
         <div class="post-data">
             <div itemprop="datePublished"
                  th:text="'发布于 '+ ${#dates.format(article.created,'yyyy-MM-dd HH:mm:ss')}"></div>
-            阅读数：<span th:text="${article.hits}"></span>&nbsp;评论数：<span th:text="${article.commentsNum}"></span>
+            阅读数:<span th:text="${article.hits}"></span>&nbsp;评论数:<span th:text="${article.commentsNum}"></span><br>
+            <span th:text="${article.modified}?'最后更新于:'+${#dates.format(article.modified,'yyyy-MM-dd HH:mm:ss')}:_"></span>
         </div>
     </div>
-    <div id="post-content" class="post-content" th:utext="${commons.article(article.content)}"></div>
+
+    <p class="post-tags">
+        <a th:each="tag:${tags}" th:text="${tag}"></a>
+    </p>
+
+    <div id="post-content" class="post-content" th:utext="${commons.article(article.content)}">
+
+    </div>
+    <div class="end-logo"><i class="am-icon-btn am-success am-icon-lg" style="">完</i></div>
+    <br>
+    <div class="other">
+        <div class="likeBtn am-btn am-btn-danger">
+            <div class="likeHeart"><i class="am-icon-heart-o">&nbsp;&nbsp;喜欢</i></div>
+            <div class="likesNum"><span> 999</span></div>
+        </div>
+    </div>
 </article>
 
 <div th:replace="index/comments::comments"></div>
@@ -86,8 +103,9 @@
         top: 100px;
     }
 
-
-
+    .other{
+        text-align: center;
+    }
 
 </style>
 </html>

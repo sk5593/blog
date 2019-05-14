@@ -19,6 +19,8 @@ public class LoginService {
     UserMapper userMapper;
 
     public synchronized Result login(String username, String password, HttpSession session) {
+        //设置session的过期时间
+        session.setMaxInactiveInterval(60*360);
         String s = TaleUtils.MD5encode(password);
         //账号密码正确并且activated为1，如果账号密码正确，但是activated为0，则计算与上次登录禁用的时间差，
         // 达到半小时则将activate置为0，正确登录

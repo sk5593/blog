@@ -64,8 +64,7 @@ public class AdminArticleController {
     {
         try {
             articleService.insertArticles(content);
-
-              return Result.ok();
+            return Result.ok();
         }catch (Exception e){
               throw e;
         }

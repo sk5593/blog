@@ -19,6 +19,7 @@ public interface ContentsMapper {
     Integer selectCountContents();
     Integer selectCountComments();
     Long selectLastUpdate();
+    Long selectLastCreated();
     void updateCategory(@Param("cname") String cname,@Param("kid") Integer kid);
     //删除关系表的某条数据
     void deleteRelationshipByCid(Integer cid);

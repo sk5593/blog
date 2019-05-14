@@ -944,7 +944,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     padding: 5px 0 15px;
     border-bottom: 1px solid #e0e0e0
 }
-
+.end-logo {
+    text-align: center;
+}
 .post-tags a {
     font-size: 13px;
     font-weight: 600;

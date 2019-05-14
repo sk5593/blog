@@ -18,7 +18,9 @@ import org.springframework.web.bind.annotation.*;
 import javax.enterprise.inject.Default;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -41,6 +43,11 @@ public class ArticleController {
         Integer hits = article.getHits();
         hits = hits + 1;
         articleService.addHits(hits, cid);
+
+        String content = article.getTags();
+        String[] split = content.split(",");
+
+        model.addAttribute("tags",split);
 
         model.addAttribute("article", article);
 

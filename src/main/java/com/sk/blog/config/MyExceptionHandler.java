@@ -23,7 +23,7 @@ public class MyExceptionHandler {
     ExceptionUtils utils;
     @ExceptionHandler(Exception.class)
     public String exception500(Exception e, Model model,HttpServletRequest request) throws SQLException, ClassNotFoundException {
-        model.addAttribute("javax.servlet.error.status_code",+500);
+        model.addAttribute("javax.servlet.error.status_code",500);
         utils.errorToDB(e);
         return "forward:/error";
     }

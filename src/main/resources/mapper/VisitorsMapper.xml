@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sk.blog.dao.VisitorsMapper">
+   <!--<resultMap id="result" type="com.sk.blog.bean.Visitor">-->
+      <!--<id column="id" property="id"></id>-->
+      <!--<result column="visit_ip" property="ip"/>-->
+      <!--<result column="visit_time" property="time"/>-->
+   <!--</resultMap>-->
    <update id="updateVisitorsNum" >
-      UPDATE t_visitors SET allvisitors=allvisitors+1,todayvisitors=todayvisitors+1
+      UPDATE t_visitors SET allvisitors=allvisitors+#{size},todayvisitors=todayvisitors+#{size}
    </update>
-   <insert id="insertVisitorsMessages">
-      INSERT INTO t_visitor(visit_ip,visit_time) VALUES (#{ip},#{time})
+   <insert id="insertVisitorsMessages" parameterType="java.util.List">
+      INSERT INTO
+      t_visitor(visit_ip,visit_time)
+      VALUES
+       <foreach collection="list" item="visit" separator=",">
+          (#{visit.ip},#{visit.time})
+       </foreach>
    </insert>
    <select id="getVisitorsNum" resultType="com.sk.blog.bean.Visitors">
       SELECT * FROM t_visitors

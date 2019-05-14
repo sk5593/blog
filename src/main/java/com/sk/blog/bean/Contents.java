@@ -13,7 +13,7 @@ public class Contents {
 
     private Long created;
 
-    private Integer modified;
+    private Long modified;
 
     private Integer authorId;
 
@@ -71,11 +71,11 @@ public class Contents {
     }
 
 
-    public Integer getModified() {
+    public Long getModified() {
         return modified;
     }
 
-    public void setModified(Integer modified) {
+    public void setModified(Long modified) {
         this.modified = modified;
     }
 

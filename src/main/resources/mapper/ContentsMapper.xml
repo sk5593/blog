@@ -59,6 +59,10 @@
             FROM t_comments
     </select>
     <select id="selectLastUpdate" resultType="long">
+        SELECT MAX(modified) as lastUpdate
+        FROM t_contents
+    </select>
+    <select id="selectLastCreated" resultType="long">
         SELECT MAX(created) as lastUpdate
         FROM t_contents
     </select>

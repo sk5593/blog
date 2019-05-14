@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.enterprise.inject.New;
+import javax.xml.crypto.Data;
 import java.util.Date;
 import java.util.List;
 
@@ -174,6 +175,8 @@ public class ArticleService {
             }
 
         }
+        long time = new Date().getTime();
+        contents.setModified(time);
         int i = contentsMapper.updateByPrimaryKey(contents);
         if(i>0)
             return Result.ok();

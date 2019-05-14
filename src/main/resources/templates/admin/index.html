@@ -108,6 +108,7 @@
                                         </li>
                                     </ul>
                                 </div>
+                                <div class="sk2"></div>
                             </div>
                         </div>
                     </div>
@@ -120,23 +121,47 @@
 <div th:replace="admin/footer :: footer"></div>
 </body>
 <script>
-    $(function () {
+    window.onload = function (ev) {
         $.ajax({
-            url:"",
-            type:"post",
-            success:function (result) {
-
-                data=""
-                $.each(result,function (k,v) {
-                   data+="      <li class=\"list-group-item\" >\n" +
-                       "                                            <span >"+v.stringCreated+"</span>\n" +
-                       "                                            <span >"+v.data+"</span>\n" +
-                       "                                        </li>"
-                })
-                $("#logs").html(data)
-
+            url: "/admin/index/1",
+            success: function (result) {
+                $(".sk2").pagination({
+                    items: result.pages,
+                    itemsOnPage: 1,
+                    cssStyle: 'light-theme',
+                    onPageClick: nextPage,
+                    prevText:"上一页",
+                    nextText:"下一页"
+                });
+                nextPage(1)
             }
+
         })
+    }
+    function nextPage(index) {
+    $.ajax({
+        url: "/admin/index/" + index,
+        success: function (result) {
+            data = "";
+            $.each(result.list, function (k, v) {
+                data+="      <li class=\"list-group-item\" >\n" +
+                    "                                            <span >"+v.stringCreated+"</span><br>\n" +
+                    "                                            <span class='spanData' >"+v.data+"</span>\n" +
+                    "                                        </li>"
+
+                $("#logs").html(data)
+            })
+        }
     })
+    }
 </script>
+<script type="text/javascript" src="/admin/js/jquery.simplePagination.js"></script>
+<link th:href="@{/index/simplePagination.css}" rel="stylesheet" type="text/css"/>
+<style>
+
+    .spanData{
+        word-wrap:break-word;
+        word-break:break-all;
+    }
+</style>
 </html>

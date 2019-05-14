@@ -43,6 +43,7 @@ public class AdminCategoryController {
             Result result = categoryService.updateCategory(cname, kid);
             return result;
         }else {
+            //插入新分类
             Result result = categoryService.saveCategory(cname);
             return result;
         }

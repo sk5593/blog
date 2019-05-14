@@ -3,7 +3,6 @@ package com.sk.blog.bean;
 public class Logs {
     private Integer id;
 
-
     private String data;
 
     private Long created;

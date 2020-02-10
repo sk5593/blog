@@ -5,6 +5,7 @@
 <div class="sk2" th:fragment="pageNav(pageInfo, prevText, nextText, prefix)">
 <ol class="pagination">
     <style>
+
         div.sk2 {
             text-align: center;
         }
@@ -41,8 +42,8 @@
     <!-- navigatepageNums 页面下标组成的数组 [1,2]-->
 
     <th:block th:each="navIndex :${ pageInfo.navigatepageNums}">
-        <li th:class="${pageInfo.pageNum==navIndex}?'current':''">
-            <a th:href="@{'/'+${prefix}+'/'+${navIndex}}" th:text="${navIndex}"></a>
+        <li>
+            <a th:href="@{'/'+${prefix}+'/'+${navIndex}}" th:text="${navIndex}" th:style="${pageInfo.pageNum==navIndex}?'color:blue':''"></a>
         </li>
     </th:block>
 

@@ -48,11 +48,15 @@ public class AboutController {
      */
     @RequestMapping("/messagesBoard")
     @ResponseBody
-    public Result messagesBoard(Integer mid, String author, String mail, String mytextarea, HttpServletRequest request)
-    {
+    public Result messagesBoard(Integer mid, String author, String mail, String mytextarea, HttpServletRequest request) throws Exception {
 
          MessagesBoard messagesBoard = new MessagesBoard();
-         messagesBoard.setContent(mytextarea);
+         if(mytextarea!=null&&StringUtils.isNotEmpty(mytextarea)){
+             messagesBoard.setContent(mytextarea);
+         }else {
+             throw new Exception();
+         }
+
          if(!StringUtils.isEmpty(mail))
          messagesBoard.setMail(mail);
          if(!StringUtils.isEmpty(author))

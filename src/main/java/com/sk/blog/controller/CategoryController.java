@@ -8,6 +8,7 @@ import com.sk.blog.service.ArchivesService;
 import com.sk.blog.service.ArticleService;
 import com.sk.blog.service.CategoryService;
 import com.sk.blog.utils.Commons;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -85,14 +86,20 @@ public class CategoryController {
         for (Contents c:contents
                 ) {
             String content = c.getContent();
-            if(content.length()>20)
-            {
-                String substring = content.substring(0, 100);
-                c.setContent(substring+"...");
-            }
-            if(content.startsWith("<iframe")&&content.endsWith("</iframe>"))
-            {
-                c.setContent("...");
+            String txtcontent = content.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
+            txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");//去除字符串中的空格,回车,换行符,制表符
+            if(!StringUtils.isEmpty(txtcontent)){
+                if (txtcontent.length() > 100) {
+
+                    String substring = txtcontent.substring(0, 100);
+
+                    c.setContent(substring + "...");
+                }
+                else {
+                    c.setContent(txtcontent);
+                }
+            }else {
+                c.setContent("无摘要内容");
             }
         }
         model.addAttribute("articles",contents);

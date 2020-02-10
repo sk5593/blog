@@ -31,6 +31,7 @@
     <select id="selectLastContents" resultType="com.sk.blog.bean.Contents">
         SELECT title,created,cid
         FROM t_contents
+        WHERE status = 'publish'
         ORDER BY created DESC
         limit 0 , 5
     </select>

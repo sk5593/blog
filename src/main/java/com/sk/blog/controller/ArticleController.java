@@ -127,4 +127,5 @@ public class ArticleController {
     public String checkout(@RequestParam String data) {
         return data;
     }
+
 }

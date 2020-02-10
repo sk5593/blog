@@ -889,11 +889,11 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 .post-content img {
     position: relative;
-    display: block;
     overflow: hidden;
     max-width: 100%;
     height: auto;
-    margin: 0 auto
+    margin: 0 auto;
+
 }
 
 .post-content input.text {

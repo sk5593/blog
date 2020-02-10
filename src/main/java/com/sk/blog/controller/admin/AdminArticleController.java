@@ -7,17 +7,32 @@ import com.sk.blog.service.CategoryService;
 import com.sk.blog.utils.AdminCommons;
 import com.sk.blog.utils.Commons;
 import com.sk.blog.utils.Result;
+import org.apache.tomcat.util.http.fileupload.FileUploadException;
+
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.interceptor.TransactionAspectSupport;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 public class AdminArticleController {
+    @Value("${web.upload-path}")
+    String uploadPath;
+    @Value("${web.upload-url}")
+    String uploadUrl;
     Commons commons=new Commons();
     @Autowired
     CategoryService categoryService;
@@ -109,5 +124,39 @@ public class AdminArticleController {
 
         Result result = articleService.updateArticle(contents);
         return result;
+    }
+    /**
+     * kindeditor上传图片
+     */
+    @RequestMapping( "/upload" )
+    public void upload(@RequestParam( "imgFile" ) MultipartFile file, HttpServletResponse response, HttpServletRequest request) throws IOException, FileUploadException {
+        PrintWriter out = response.getWriter();
+
+        String ext = file.getOriginalFilename();
+        ext = ext.substring(ext.lastIndexOf("."));
+//        文件名
+        String fileName = UUID.randomUUID() + ext;
+//        //文件保存目录URL
+        String saveUrl = "/images/" + fileName;
+        try {
+            file.transferTo(new File(uploadPath, fileName));
+        } catch (Exception e) {
+            out.println(getError("上传文件失败。"));
+            return;
+        }
+        response.setContentType("text/html; charset=UTF-8");
+        JSONObject obj = new JSONObject();
+        obj.put("error", 0);
+//        https://sknebula.top
+//        http://localhost:8080
+        obj.put("url", uploadUrl + saveUrl);
+        response.getWriter().println(obj.toJSONString());
+        return;
+    }
+    private String getError(String message) {
+        JSONObject obj = new JSONObject();
+        obj.put("error", 1);
+        obj.put("message", message);
+        return obj.toJSONString();
     }
 }

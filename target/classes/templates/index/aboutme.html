@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" class="js cssanimations">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--<div th:replace="index/header::header(null,null)"></div>-->
+    <script th:src="@{//cdn.bootcss.com/jquery/2.2.3/jquery.min.js}"></script>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="no-siteapp" http-equiv="Cache-Control">
+    <link href="/aboutme/aboutmetimeline.css" rel="stylesheet" type="text/css">
+    <link href="/aboutme/all.css" rel="stylesheet">
+    <link href="/aboutme/comment.css" rel="stylesheet">
+    <link href="/aboutme/aboutme.css" rel="stylesheet">
+    <script src="/aboutme/underscore-min.js.下载"></script>
+    <div th:replace="index/header2::header2('关于我',null)"></div>
+</head>
+<!--<div th:replace="index/sidebar::sidebar" class="sidebar"></div>-->
+<body>
+<!--背景动画-->
+<canvas id="c_n9" width="1920" height="990"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+<script src="/codingLife/canvas-nest.min.js.下载"></script>
+<canvas id="c_n4" width="1037" height="920"
+        style="position: fixed; top: 0px; left: 0px; z-index: -1; opacity: 0.5;"></canvas>
+
+<div id="app">
+    <!--<div th:replace="index/rightsidebar::rightsidebar"></div>-->
+
+    <div id="main">
+        <div class="am-container">
+            <div class="am-g">
+                <div id="wordsView" lg-uid="lg0">
+                    <div class="title">
+
+                        <div class="title-words">
+                            <h1 class="title-words-h1">关于</h1>
+                        </div>
+                        <div class="title-img">
+                            <img src="./aboutme/1.jpg">
+                        </div>
+                    </div>
+                    <div class="zhy-my-words am-scrollspy-init am-scrollspy-inview am-animation-scale-down"
+                         data-am-scrollspy="{animation: &#39;scale-down&#39;}">
+                        <p><i class="fa fa-quote-left fa-lg" style="float: left"></i></p><br>
+                        <div class="zhy-info" th:if="${about.aname} == 'aboutme'" th:each="about : ${allAbouts}">
+                            <p class="zhy-info-words" th:text="${about.atext}"></p>
+                        </div>
+                        <p><i class="fa fa-quote-right fa-lg" style="float: right"></i></p><br>
+                        <hr>
+                    </div>
+                    <div class="zhy-hobby">
+                        <blockquote style="padding: 10px 18px">
+                            兴趣爱好
+                            <ul th:if="${about.aname} == 'interest'" th:each="about : ${allAbouts}">
+                                <li th:utext="${about.atext}"></li>
+                            </ul>
+                        </blockquote>
+                        <span style="font-size: 14px;color: #555;"></span>
+                    </div>
+                    <hr class="am-divider am-divider-dashed am-no-layout" data-am-widget="divider" style="">
+                    <div class="zhy-original">
+                        <div class="zhy-original-title">
+                            <h1 class="zhy-original-title-h1">初衷</h1>
+                            <p class="zhy-erha">
+                                <img class="enlargePicture am-img-thumbnail"
+                                     data-src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/erha.png"
+                                     src="./aboutme/3.jpg" lg-event-uid="&amp;3">
+                            </p><br><br>
+                            <div class="zhy-my-words am-scrollspy-init am-scrollspy-inview am-animation-scale-down"
+                                 data-am-scrollspy="{animation: &#39;scale-down&#39;}">
+                                <p><i class="fa fa-quote-left fa-lg" style="float: left"></i></p><br>
+                                <div class="zhy-original-words">
+                                    <div th:each="about : ${allAbouts}" th:if="${about.aname} == 'orginal'"
+                                         class="zhy-info">
+                                        <p th:utext="${about.atext}" class="zhy-info-words"></p>
+                                    </div>
+                                    <p style="text-align: center">
+                                        <b><i>学习的不仅是技术，更是梦想！<br>再牛B的技术，也经不住你傻B式的坚持！</i></b></p>
+                                </div>
+                            </div>
+                        </div>
+                        <p><i class="fa fa-quote-right fa-lg" style="float: right"></i></p><br>
+                    </div>
+                    <div class="zhy-life">
+                        <div style="text-align: right;margin: 30px auto">
+                        </div>
+                        <div class="zhy-life-title">
+                            <span>心情</span>
+                        </div>
+                        <div class="zhy-you">
+                            <img class="enlargePicture am-img-thumbnail"
+                                 data-src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/you.png"
+                                 src="./aboutme/2.jpg" lg-event-uid="&amp;5">
+                        </div>
+                        <p></p>
+                        <div class="content" th:if="${about.aname} == 'mood'" th:each="about:${allAbouts}">
+                            <article>
+                                <!--年份使用淡出动画，内容使用左侧滑入效果-->
+                                <h3 data-am-scrollspy="{animation: &#39;scale-up&#39;}"></h3>
+                                <section data-am-scrollspy="{animation: &#39;slide-left&#39;}">
+                                    <span class="point-time point-red"></span>
+                                    <time datetime="2018-12">
+                                        <span th:text="${#dates.format(about.acreated,'yyyy-MM-dd')}"></span>
+                                    </time>
+                                    <aside>
+                                        <p class="things" th:text="${about.atitle}"></p>
+                                        <p class="brief"><span class="text-blue" th:utext="${about.atext}">
+                                            </span></p>
+                                    </aside>
+                                </section>
+
+                            </article>
+
+                        </div>
+                        <!--留言功能-->
+                        <div class="comment">
+                        <div class="comment-top">
+
+                        <form method="post" id="comment-form" role="form">
+                        <input type="hidden" name="mid" id="mid"/>
+                        <input type="text" name="author" maxlength="12" id="author"
+                        class="form-control input-control clearfix"
+                        placeholder="姓名 (可选)"
+                        />
+                        <input type="email" name="mail" id="mail" class="form-control input-control clearfix"
+                        placeholder="邮箱 (可选)"
+                        />
+                        <textarea name="mytextarea" style="width:600px;height:250px; "
+                        id="mytextarea"></textarea>
+                        <button type="button" id="misubmit">提交</button>
+                        </form>
+                        </div>
+
+                        <!--页面留言-->
+                        <ol class="comment-list" id="comment_list">
+                        </ol>
+                        <div class="lists-navigator clearfix">
+
+                        <div class="sk2">
+                        <ol class="pagination">
+
+                        <block id="block">
+                        <!--页标-->
+                        </block>
+
+
+                        </ol>
+                        </div>
+                        </div>
+                        </div>
+                        PC和WAP自适应版
+                        <div id="SOHUCS" sid="messagesBoard"></div>
+                        <script type="text/javascript">
+                        (function () {
+                            var appid = 'cyudiDbnb';
+                            var conf = 'prod_72c6d70dbd710e65c1a0752fe90d1850';
+                            var width = window.innerWidth || document.documentElement.clientWidth;
+                            if (width < 960) {
+                                window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+                            } else {
+                                var loadJs = function (d, a) {
+                                    var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+                                    var b = document.createElement("script");
+                                    b.setAttribute("type", "text/javascript");
+                                    b.setAttribute("charset", "UTF-8");
+                                    b.setAttribute("src", d);
+                                    if (typeof a === "function") {
+                                        if (window.attachEvent) {
+                                            b.onreadystatechange = function () {
+                                                var e = b.readyState;
+                                                if (e === "loaded" || e === "complete") {
+                                                    b.onreadystatechange = null;
+                                                    a()
+                                                }
+                                            }
+                                        } else {
+                                            b.onload = a
+                                        }
+                                    }
+                                    c.appendChild(b)
+                                };
+                                loadJs("http://changyan.sohu.com/upload/changyan.js", function () {
+                                    window.changyan.api.config({appid: appid, conf: conf})
+                                });
+                            }
+                        })(); </script>
+                    </div>
+                </div>
+                <br><br>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div th:replace="index/footer2::footer2"></div>
+</div>
+<div class="feedback am-animation-slide-top">
+    <a class="feedbackClose am-close am-close-alt am-close-spin am-icon-times"></a>
+</div>
+</div>
+<!--放大图片插件-->
+<script src="/aboutme/picturefill.min.js.下载"></script>
+
+</body>
+<script>
+    KindEditor.ready(function (K) {
+        window.editor = K.create('#mytextarea', {
+            items: [
+                'fontname', 'fontsize', 'i', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', 'i', 'justifyleft', 'justifycenter', 'justifyright',
+                'insertunorderedlist', 'i', 'emoticons', 'link'
+            ],
+//不可以拖动
+            resizeType: 0,
+            minHeight: 50,
+//设置字体大小
+            cssData: 'body {font-size:14px;}',
+//数据同步
+            afterBlur: function () {
+                this.sync();
+            },
+//创建时初始化
+            afterCreate: function () {
+                K.html("#mytextarea", "想对作者说点什么...")
+            },
+//聚焦时清空初始化
+            afterFocus: function () {
+                if (editor.html() == "想对作者说点什么...")
+                    K.html("#mytextarea", "")
+            }
+        })
+    })
+</script>
+
+<script>
+    $("#misubmit").click(function () {
+        var d = $("#mytextarea").val();
+        if ($.trim(d) == "" || typeof(d) == "undefined" || d === null) {
+            alert("留言不能为空！")
+            return false;
+        }
+        var form = $("#comment-form").serialize()
+        $.ajax({
+            url: "/messagesBoard",
+            type: "post",
+            data: form,
+            dataType: "json",
+            success: function (result) {
+
+                if (result && result.success) {
+                    alert("留言成功")
+                    //清空textarea
+                    editor.html("");
+                    //刷新显示刚刚的留言内容
+                    nextPage(1)
+                } else {
+                    alert(result.msg)
+                }
+            }
+
+        })
+    })
+    var page = "";
+    window.onload = function load(ev) {
+
+        $.ajax({
+            url: "/messagesBoard/1",
+            success: function (result) {
+                $(".sk2").pagination({
+                    items: result.pages,
+                    itemsOnPage: 1,
+                    cssStyle: 'light-theme',
+                    onPageClick: nextPage,
+                    prevText: "上一页",
+                    nextText: "下一页"
+                });
+
+                nextPage(1)
+            }
+
+        })
+    }
+
+    function nextPage(index) {
+
+        $.ajax({
+            url: "/messagesBoard/" + index,
+            success: function (result) {
+                data = "";
+                //循环遍历，显示每一页的数据
+                $.each(result.list, function (k, v) {
+                    data += "<li  class=\"comment-body comment-parent comment-odd\">\n" +
+                        "                            <div>\n" +
+                        "                                <div class=\"comment-view\" >\n" +
+                        "                                    <div class=\"comment-header\">\n" +
+                        "                                        <!--设置get请求的参数-->\n" +
+                        "\n" +
+                        "                                        <span class=\"comment-author\">\n" +
+                        "                                <a href=\"##\" rel=\"external nofollow\"\n" +
+                        "                                    id=\"writer\">" + v.author + " " + "第" + v.mid + "楼" + "</a>\n" +
+                        "                                </span>\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"comment-content\" >\n" +
+                        "                                        <span class=\"comment-author-at\" ></span>\n" +
+                        "                                        <p  id=\"content\">" + v.content + "</p>\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"comment-meta\">\n" +
+                        "                                        <time class=\"comment-time\" >" + v.stringCreated + "</time>\n" +
+                        "                                        <span class=\"comment-reply\">\n" +
+                        "                            </span>\n" +
+                        "                                    </div>\n" +
+                        "                                </div>\n" +
+                        "                            </div>\n" +
+                        "                        </li>"
+                    $("#comment_list").html(data)
+                })
+
+            }
+        })
+
+    }
+
+
+</script>
+</html>

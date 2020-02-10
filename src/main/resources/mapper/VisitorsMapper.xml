@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sk.blog.dao.VisitorsMapper">
-   <!--<resultMap id="result" type="com.sk.blog.bean.Visitor">-->
-      <!--<id column="id" property="id"></id>-->
-      <!--<result column="visit_ip" property="ip"/>-->
-      <!--<result column="visit_time" property="time"/>-->
-   <!--</resultMap>-->
    <update id="updateVisitorsNum" >
       UPDATE t_visitors SET allvisitors=allvisitors+#{size},todayvisitors=todayvisitors+#{size}
    </update>

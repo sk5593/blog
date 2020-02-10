@@ -18,7 +18,7 @@ public class MyInterceptor implements HandlerInterceptor
 
         HttpSession session = request.getSession();
         String msg = (String) session.getAttribute("msg");
-        if(msg.equals("admin_login"))
+        if(msg!=null&&msg.equals("admin_login"))
         {
             return true;
         }

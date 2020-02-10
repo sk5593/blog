@@ -11,6 +11,8 @@ import com.sk.blog.utils.Commons;
 import com.sk.blog.utils.IpAddr;
 import com.sk.blog.utils.MapCache;
 import com.sk.blog.utils.TaleUtils;
+
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +29,6 @@ import java.util.List;
 @Controller
 public class IndexController {
 
-    MapCache cache = new MapCache();
     Commons commons = new Commons();
     @Autowired
     IndexService indexService;
@@ -61,14 +62,24 @@ public class IndexController {
         for (Contents c : allContents.getList()
                 ) {
             String content = c.getContent();
-                if (content.length() > 100) {
-                String substring = content.substring(0, 100);
+            String txtcontent = content.replaceAll("</?[^>]+>", ""); //剔出<html>的标签
+            txtcontent = txtcontent.replaceAll("<a>\\s*|\t|\r|\n</a>", "");//去除字符串中的空格,回车,换行符,制表符
 
-                c.setContent(substring + "...");
+
+            if(!StringUtils.isEmpty(txtcontent)){
+                if (txtcontent.length() > 100) {
+
+                    String substring = txtcontent.substring(0, 100);
+
+                    c.setContent(substring + "...");
+                }
+                else {
+                    c.setContent(txtcontent);
+                }
+            }else {
+                c.setContent("无摘要内容");
             }
-            if (content.startsWith("<iframe") && content.endsWith("</iframe>")) {
-                c.setContent("...");
-            }
+
         }
         model.addAttribute("articles", allContents);
         model.addAttribute("commons", commons);
